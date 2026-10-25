@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="Original Aura BOED shirt illustration placeholder">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dededc"/><stop offset=".54" stop-color="#efeeec"/><stop offset="1" stop-color="#d5d5d3"/></linearGradient>
+      <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--light,#bdb9b2)"/><stop offset=".47" stop-color="var(--mid,#999)"/><stop offset="1" stop-color="var(--dark,#666)"/></linearGradient>
+      <linearGradient id="trouser" x1="0" y1="0" x2="1" y2="0"><stop stop-color="var(--dark,#777)"/><stop offset=".45" stop-color="var(--mid,#999)"/><stop offset="1" stop-color="var(--dark,#777)"/></linearGradient>
+      <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".64"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <filter id="shadow"><feGaussianBlur stdDeviation="25"/></filter>
+      <pattern id="grain" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 3h1M4 7h1" stroke="#333" stroke-opacity=".06"/></pattern>
+    </defs>
+    <rect width="900" height="1125" fill="url(#bg)"/><ellipse cx="350" cy="390" rx="570" ry="540" fill="url(#glow)"/>
+    <ellipse cx="483" cy="1095" rx="205" ry="32" fill="#555" opacity=".16" filter="url(#shadow)"/>
+    <g><path d="M432 169L432 262L521 262L521 170" fill="#bd967e"/>
+ <ellipse cx="476" cy="127" rx="64" ry="90" fill="#c89e86"/><path d="M410 115Q405 38 470 28Q538 40 536 109Q521 91 510 70Q460 92 410 90Z" fill="#514b45"/>
+ <path d="M435 227L472 281L519 228L582 246L624 364L591 774L370 774L340 365L375 249Z" fill="#47657e"/>
+ <path d="M375 252Q326 265 313 320L270 602L327 610L380 444ZM580 250Q635 260 646 319L688 596L628 610L571 442Z" fill="#385672"/>
+ <path d="M431 227L474 284L454 328L400 238ZM520 225L475 285L495 328L555 239Z" fill="#e6e7e3"/>
+ <path d="M474 284L473 775" stroke="#263f53" stroke-width="3"/>
+ <g fill="#e1dace"><circle cx="478" cy="346" r="4"/><circle cx="478" cy="419" r="4"/><circle cx="478" cy="490" r="4"/><circle cx="478" cy="561" r="4"/><circle cx="478" cy="632" r="4"/></g>
+ <path d="M371 776L368 1083L446 1083L478 851L509 1083L590 1083L578 775Z" fill="#d8d4c8"/>
+ <path d="M366 1076L358 1099L447 1099L449 1076M508 1076L505 1099L592 1099L590 1076" fill="#63564a"/>
+ </g>
+    <rect width="900" height="1125" fill="url(#grain)" opacity=".5"/>
+    </svg>

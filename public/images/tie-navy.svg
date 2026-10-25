@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="Original Aura BOED tie illustration placeholder">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4e4e1"/><stop offset=".54" stop-color="#efeeec"/><stop offset="1" stop-color="#d5d5d3"/></linearGradient>
+      <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--light,#bdb9b2)"/><stop offset=".47" stop-color="var(--mid,#999)"/><stop offset="1" stop-color="var(--dark,#666)"/></linearGradient>
+      <linearGradient id="trouser" x1="0" y1="0" x2="1" y2="0"><stop stop-color="var(--dark,#777)"/><stop offset=".45" stop-color="var(--mid,#999)"/><stop offset="1" stop-color="var(--dark,#777)"/></linearGradient>
+      <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".64"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <filter id="shadow"><feGaussianBlur stdDeviation="25"/></filter>
+      <pattern id="grain" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 3h1M4 7h1" stroke="#333" stroke-opacity=".06"/></pattern>
+    </defs>
+    <rect width="900" height="1125" fill="url(#bg)"/><ellipse cx="350" cy="390" rx="570" ry="540" fill="url(#glow)"/>
+    <ellipse cx="483" cy="1095" rx="205" ry="32" fill="#555" opacity=".16" filter="url(#shadow)"/>
+    <path d="M428 171L475 124L522 170L495 257L518 749L466 847L431 744L455 258Z" fill="#30435c"/>
+ <path d="M428 171L475 124L522 170L493 247L455 247Z" fill="#57708b"/>
+ <path d="M454 271L490 271M454 320L493 320M457 370L495 370M459 420L498 420M463 470L502 470M463 520L507 520M465 570L509 570" stroke="#a1aeba" stroke-width="5" stroke-opacity=".38"/>
+ <path d="M466 847L518 749L431 744Z" fill="#1b2b40"/>
+    <rect width="900" height="1125" fill="url(#grain)" opacity=".5"/>
+    </svg>

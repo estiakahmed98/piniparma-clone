@@ -1,0 +1,33 @@
+Aura BOED - NEXT.JS FRONTEND DEMO
+==================================
+
+Windows 11 e run korar niyom:
+
+1. ZIP extract korun.
+2. Node.js 22 LTS install thakte hobe.
+3. start-demo.bat double click korun.
+4. Browser e jan: http://localhost:3000
+
+Alternative PowerShell:
+  cd "C:\YourFolder\Aura-BOED-demo"
+  npm install
+  npm run dev
+
+Pages:
+  Home:        http://localhost:3000
+  Suits:       http://localhost:3000/collections/suits
+  Product:     http://localhost:3000/products/sand-beige-tailored-suit
+
+Image add korar jonno:
+  1. public/images/ folder e .jpg ba .webp photo rakhun.
+  2. lib/products.ts e image: '/images/your-photo.webp' din.
+  3. Hero image: app/page.tsx file e /images/hero-editorial.svg replace korun.
+  4. Logo/text/navigation: components/Header.tsx
+
+Product name, price, size, colors: lib/products.ts
+Overall CSS: app/globals.css
+
+IMPORTANT: Eta front-end client demo. Real database, orders, customer accounts,
+payment gateway nei. Cart and wishlist only browser localStorage e save hoy.
+
+More details: README.md

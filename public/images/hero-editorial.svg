@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050" aria-label="Aura BOED editorial campaign placeholder">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d1cdc5"/><stop offset=".65" stop-color="#a9a9a5"/><stop offset="1" stop-color="#777e82"/></linearGradient>
+<linearGradient id="j" x1="0" x2="1"><stop stop-color="#74695d"/><stop offset=".5" stop-color="#c4b8a8"/><stop offset="1" stop-color="#756c60"/></linearGradient>
+<linearGradient id="k" x1="0" x2="1"><stop stop-color="#293a48"/><stop offset=".5" stop-color="#6b8292"/><stop offset="1" stop-color="#233745"/></linearGradient>
+<linearGradient id="fade" x1="0" x2="1"><stop stop-color="#1b262b" stop-opacity=".58"/><stop offset=".52" stop-color="#263339" stop-opacity=".15"/><stop offset="1" stop-color="#18232a" stop-opacity=".05"/></linearGradient></defs>
+<rect width="1800" height="1050" fill="url(#g)"/><path d="M0 0H470L380 1050H0ZM1445 0H1800V1050H1620Z" fill="#e5e0d9" opacity=".37"/>
+<path d="M730 0V1050M1430 0V1050" stroke="#f1efeb" stroke-opacity=".4" stroke-width="4"/>
+<g transform="translate(790,3) scale(1.13)"><path d="M139 519L130 925L280 925L327 620L373 925L508 925L500 519Z" fill="#444842"/>
+<path d="M259 120L267 183L363 184L364 120" fill="#b18b76"/><ellipse cx="312" cy="61" rx="63" ry="83" fill="#bc977e"/><path d="M248 63Q250 -10 304 -10Q376 -10 376 68L353 15L250 32" fill="#4c4845"/>
+<path d="M256 176L312 265L367 174L435 199L438 663L184 663L190 196Z" fill="#eee9de"/>
+<path d="M264 181L158 221L105 357L83 574L152 595L204 430L193 664L318 660L294 310Z" fill="url(#j)"/>
+<path d="M366 182L462 218L509 346L568 550L500 573L430 419L439 667L315 662L330 311Z" fill="url(#j)"/>
+<path d="M266 180L316 316L280 387L182 216Z" fill="#d0c6b9"/><path d="M369 180L315 319L355 388L457 216Z" fill="#c2b8aa"/>
+<path d="M309 325L313 562" stroke="#696457" stroke-width="4"/></g>
+<g transform="translate(1322,185) scale(.95)"><path d="M138 523L126 910L268 910L312 618L353 911L491 911L491 524Z" fill="#303338"/>
+<ellipse cx="303" cy="74" rx="64" ry="83" fill="#bc957f"/><path d="M240 71Q245 -11 309 -5Q380 -3 370 70L349 17L246 40" fill="#302c2b"/>
+<path d="M265 176L309 283L355 176L445 202L436 659L178 658L183 204Z" fill="#efeee9"/>
+<path d="M259 184L160 220L107 347L75 572L151 578L199 424L181 650L318 656L299 326Z" fill="url(#k)"/>
+<path d="M356 184L458 218L505 336L559 544L484 575L434 426L446 651L309 656L322 325Z" fill="url(#k)"/>
+<path d="M264 176L319 326L280 389L178 217Z" fill="#5a7384"/><path d="M356 175L318 327L357 390L458 218Z" fill="#496477"/></g>
+<rect width="1800" height="1050" fill="url(#fade)"/></svg>

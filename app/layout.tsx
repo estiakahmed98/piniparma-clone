@@ -1,0 +1,17 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import { StoreProvider } from '@/components/StoreProvider';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { CartDrawer } from '@/components/CartDrawer';
+
+export const metadata: Metadata = {
+  title: { default: 'Aura BOED | Modern Tailoring & Contemporary Essentials', template: '%s | Aura BOED' },
+  description: 'An elegant showcase storefront for Aura BOED: modern tailoring, contemporary essentials, and considered style.',
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // Browser extensions can add attributes to <html> before React hydrates.
+  // Keep suppression at this element so mismatches inside the app stay visible.
+  return <html lang="en" suppressHydrationWarning><body><StoreProvider><Header/><main>{children}</main><Footer/><CartDrawer/></StoreProvider></body></html>;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 650" width="1700" height="650">
+<defs><linearGradient id="a" x2="1" y2=".3"><stop stop-color="#6e756d"/><stop offset="1" stop-color="#b3b4a5"/></linearGradient></defs>
+<rect width="1700" height="650" fill="url(#a)"/><path d="M0 0H370L500 650H0Z" fill="#525f57" opacity=".4"/>
+<path d="M1050 0L850 650H1060L1270 0Z" fill="#d2d2c6" opacity=".35"/>
+<g transform="translate(1090,-100) scale(.78)"><ellipse cx="300" cy="117" rx="70" ry="94" fill="#bc947e"/>
+<path d="M235 106Q236 14 309 16Q378 23 369 110L348 65L241 71" fill="#34363a"/>
+<path d="M246 223L170 250L109 410L85 750L212 755L228 448L234 885L423 886L433 450L458 756L585 750L525 399L472 250L382 222Z" fill="#2d414f"/>
+<path d="M246 223L321 368L290 448L170 250Z" fill="#72808a"/><path d="M381 221L318 370L360 453L474 251Z" fill="#607682"/>
+<path d="M275 221L315 297L356 221L339 330L315 375L293 333Z" fill="#f1efea"/></g>
+</svg>
