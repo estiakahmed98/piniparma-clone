@@ -182,3 +182,19 @@
 .admin-footer span{max-width:150px;text-align:right;line-height:1.6}
 }
 
+/* Campaign navigation and signature footer */
+.storefront-home > .announcement { position: relative; z-index: 61; background: #ffffff26; color: #fff; }
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)),
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .site-header { background: transparent; border-color: #ffffff21; }
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .site-header a,
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .site-header button { color: white; }
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .header-divider { background: #ffffff80; }
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .cart-count { background: #fff; color: #242620; }
+.site-footer { background: #f4f4f2; }
+.site-footer .service-strip { padding: 80px 30px 55px; border: 0; }
+.site-footer .service-strip strong { font-size: 10px; letter-spacing: .2em; }
+.site-footer .service-strip span { font-size: 12px; color: #94948c; }
+.footer-watermark { font-family: var(--serif); font-size: clamp(80px, 16vw, 330px); font-weight: 600; letter-spacing: -.065em; color: #deded9; line-height: 1.1; text-align: center; white-space: nowrap; padding: 5px 18px 25px; overflow: hidden; }
+.site-footer .footer-main { padding-top: 40px; }
+.site-footer .footer-signup input { background: transparent; }
+@media (max-width: 700px) { .site-footer .service-strip { grid-template-columns: 1fr; gap: 35px; padding: 50px 20px 35px; } .site-footer .service-strip strong { font-size: 9px; } .footer-watermark { font-size: 17vw; padding: 15px 12px; } }
