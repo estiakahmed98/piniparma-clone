@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react';
 
-export type IconName = 'search' | 'bookmark' | 'bag' | 'user' | 'menu' | 'close' | 'arrow-right' | 'arrow-left' | 'chevron-down' | 'sliders' | 'grid-four' | 'grid-two' | 'grid-one' | 'plus' | 'minus' | 'check' | 'instagram' | 'facebook' | 'truck' | 'shield' | 'rotate' | 'map-pin';
+export type IconName = 'search' | 'bookmark' | 'bag' | 'user' | 'menu' | 'close' | 'arrow-right' | 'arrow-left' | 'chevron-down' | 'sliders' | 'grid-four' | 'grid-two' | 'grid-one' | 'plus' | 'minus' | 'check' | 'instagram' | 'facebook' | 'truck' | 'shield' | 'rotate' | 'map-pin' | 'youtube' | 'tiktok' | 'x' | 'pinterest';
 
 export function Icon({ name, size = 19, strokeWidth = 1.5, ...rest }: { name: IconName; size?: number; strokeWidth?: number } & SVGProps<SVGSVGElement>) {
   const common = { fill: 'none', stroke: 'currentColor', strokeWidth, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
@@ -24,6 +24,10 @@ export function Icon({ name, size = 19, strokeWidth = 1.5, ...rest }: { name: Ic
     case 'check': content = <path d="m4 12 5 5L20 6"/>; break;
     case 'instagram': content = <><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/></>; break;
     case 'facebook': content = <path d="M17 3h-3a5 5 0 0 0-5 5v3H6v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3Z"/>; break;
+    case 'youtube': content = <><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z" fill="currentColor"/></>; break;
+    case 'tiktok': content = <><path d="M14 3v12a4 4 0 1 1-4-4M14 3c1 4 3 5 6 5M14 3h3"/></>; break;
+    case 'x': content = <><path d="M4 3h4l12 18h-4zM20 3 4 21"/></>; break;
+    case 'pinterest': content = <><circle cx="12" cy="10" r="8"/><path d="m8 22 4-15M11 13c4 5 8-5 3-6-3-1-5 2-4 5"/></>; break;
     case 'truck': content = <><path d="M2 6h12v11H2zM14 10h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></>; break;
     case 'shield': content = <><path d="m12 2 8 4v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6z"/><path d="m8 12 3 3 5-6"/></>; break;
     case 'rotate': content = <><path d="M4 8a8 8 0 1 1-1 6"/><path d="M4 3v5h5"/></>; break;

@@ -46,14 +46,14 @@ const categoryTiles = [
     label: "SHOES",
     href: "/collections/shoes",
     image: homeImages.shoes,
-    span: "narrow",
+    span: "half",
   },
   {
     title: "Room to move.",
     label: "TROUSERS",
     href: "/collections/trousers",
     image: homeImages.trousers,
-    span: "wide",
+    span: "half",
   },
 ];
 const featuredSlugs = [

@@ -219,10 +219,13 @@
   background: #dad8d0;
 }
 .mosaic-wide {
-  grid-column: span 10;
+  grid-column: span 8;
+}
+.mosaic-half {
+  grid-column: span 6;
 }
 .mosaic-narrow {
-  grid-column: span 2;
+  grid-column: span 4;
 }
 .mosaic-third {
   grid-column: span 4;
@@ -544,6 +547,7 @@
   }
   .mosaic-wide,
   .mosaic-narrow,
+  .mosaic-half,
   .mosaic-third {
     grid-column: span 1;
     height: 350px;
