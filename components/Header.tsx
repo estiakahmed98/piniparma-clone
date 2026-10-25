@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { products } from '@/lib/products';
+import { products, collectionImage, formatPrice } from '@/lib/products';
 import { Icon } from './Icons';
 import { useStore } from './StoreProvider';
 import { AccountDialog } from './AccountDialog';
@@ -18,22 +18,22 @@ const menuContent = {
   Clothing: {
     title: 'CLOTHING', links: clothingLinks,
     highlights: [['New Arrivals','/collections/suits'],['Occasion Dressing','/collections/suits'],['Everyday Essentials','/collections/shirts'],['The Aura BOED Edit','/'],['Best Sellers','/collections/suits'],['Our Story','/#our-story']],
-    promo: 'Tailoring, Reimagined', promoCta: 'Explore suits', promoHref: '/collections/suits', image: '/images/suit-cream.svg'
+    promo: 'Tailoring, Reimagined', promoCta: 'Explore suits', promoHref: '/collections/suits', image: collectionImage('suits')
   },
   Shoes: {
     title: 'FOOTWEAR', links: [['Loafers','/collections/shoes'],['Classic Shoes','/collections/shoes'],['Leather Essentials','/collections/shoes'],['View All','/collections/shoes']],
     highlights: [['Latest Styles','/collections/shoes'],['The Occasion Edit','/collections/shoes'],['Best Sellers','/collections/shoes']],
-    promo: 'The Finishing Touch', promoCta: 'Discover shoes', promoHref: '/collections/shoes', image: '/images/shoes-brown.svg'
+    promo: 'The Finishing Touch', promoCta: 'Discover shoes', promoHref: '/collections/shoes', image: collectionImage('shoes')
   },
   Accessories: {
     title: 'ACCESSORIES', links: [['Ties','/collections/accessories'],['Pocket Squares','/collections/accessories'],['Belts & Leather','/collections/accessories'],['Cufflinks','/collections/accessories'],['View All','/collections/accessories']],
     highlights: [['The Gift Edit','/collections/accessories'],['Timeless Details','/collections/accessories'],['Best Sellers','/collections/accessories']],
-    promo: 'It Is In The Details', promoCta: 'View accessories', promoHref: '/collections/accessories', image: '/images/tie-navy.svg'
+    promo: 'It Is In The Details', promoCta: 'View accessories', promoHref: '/collections/accessories', image: collectionImage('accessories')
   },
   Gifts: {
     title: 'DISCOVER GIFTS', links: [['Gifts for Him','/collections/accessories'],['Modern Classics','/collections/shirts'],['Special Occasions','/collections/suits'],['View All','/collections/accessories']],
     highlights: [['Thoughtful Choices','/collections/accessories'],['New Season Gifts','/collections/accessories'],['Explore Collections','/collections/suits']],
-    promo: 'A Thoughtful Gesture', promoCta: 'Shop gifts', promoHref: '/collections/accessories', image: '/images/tie-navy.svg'
+    promo: 'A Thoughtful Gesture', promoCta: 'Shop gifts', promoHref: '/collections/accessories', image: collectionImage('accessories')
   },
 };
 
@@ -81,7 +81,7 @@ export function Header() {
         <div className="mega-column mega-list"><h3>{activeMenu.title}</h3>{activeMenu.links.map(([label,href]) => <Link href={href} key={label}>{label}</Link>)}</div>
         <div className="mega-column mega-list"><h3>HIGHLIGHTS</h3>{activeMenu.highlights.map(([label,href]) => <Link href={href} key={label}>{label}</Link>)}</div>
         <div className="mega-column mega-feature"><h3>BEST-SELLING ESSENTIALS</h3>
-          {products.filter((p) => ['BOED-112','BOED-113','BOED-114'].includes(p.id)).map((p) => <Link className="mini-product" href={`/products/${p.slug}`} key={p.id}><img src={p.image} alt=""/><span>{p.name}<strong>Buy now</strong></span></Link>)}
+          {products.filter((p) => p.image).slice(0, 3).map((p) => <Link className="mini-product" href={`/products/${p.slug}`} key={p.id}>{p.image ? <img src={p.image} alt=""/> : <span className="image-unavailable">No image</span>}<span>{p.name}<strong>Buy now</strong></span></Link>)}
         </div>
         <Link className="mega-editorial" href={activeMenu.promoHref}>
           <img src={activeMenu.image} alt=""/><div><h2>{activeMenu.promo}</h2><span>{activeMenu.promoCta} <Icon name="arrow-right" size={16}/></span></div>
@@ -94,12 +94,12 @@ export function Header() {
       <div className="search-panel-head"><h2>What are you looking for?</h2><button aria-label="Close search" onClick={() => setSearchOpen(false)}><Icon name="close" size={22}/></button></div>
       <div className="search-input-wrap"><Icon name="search" size={23}/><input autoFocus placeholder="Search for a product or collection..." value={search} onChange={(e) => setSearch(e.target.value)}/></div>
       <h3>{search.trim() ? `RESULTS (${searchResults.length})` : 'THE SELECTION OF THE MOMENT'}</h3>
-      <div className="search-results">{searchResults.length ? searchResults.map((p) => <Link href={`/products/${p.slug}`} key={p.id} onClick={() => setSearchOpen(false)}><img src={p.image} alt=""/><span>{p.name}<small>৳{p.price.toLocaleString('en-BD')}</small></span></Link>) : <p>No products found. Try another term.</p>}</div>
+      <div className="search-results">{searchResults.length ? searchResults.map((p) => <Link href={`/products/${p.slug}`} key={p.id} onClick={() => setSearchOpen(false)}>{p.image ? <img src={p.image} alt=""/> : <span className="image-unavailable">No image</span>}<span>{p.name}<small>{formatPrice(p.price)}</small></span></Link>) : <p>No products found. Try another term.</p>}</div>
     </div></div>}
 
     {wishlistOpen && <div className="modal-shade" onMouseDown={() => setWishlistOpen(false)}><div className="wishlist-panel" role="dialog" aria-label="Saved pieces" onMouseDown={(e) => e.stopPropagation()}>
       <div className="drawer-head"><h2>Saved pieces ({savedProducts.length})</h2><button aria-label="Close saved items" onClick={() => setWishlistOpen(false)}><Icon name="close"/></button></div>
-      {savedProducts.length ? <div className="wishlist-items">{savedProducts.map((p) => <Link href={`/products/${p.slug}`} key={p.id} onClick={() => setWishlistOpen(false)}><img src={p.image} alt=""/><span>{p.name}<small>View item</small></span></Link>)}</div> : <div className="empty-bag"><Icon name="bookmark" size={34}/><h3>Your wishlist is empty</h3><p>Save your favourite styles to find them later.</p></div>}
+      {savedProducts.length ? <div className="wishlist-items">{savedProducts.map((p) => <Link href={`/products/${p.slug}`} key={p.id} onClick={() => setWishlistOpen(false)}>{p.image ? <img src={p.image} alt=""/> : <span className="image-unavailable">No image</span>}<span>{p.name}<small>View item</small></span></Link>)}</div> : <div className="empty-bag"><Icon name="bookmark" size={34}/><h3>Your wishlist is empty</h3><p>Save your favourite styles to find them later.</p></div>}
     </div></div>}
 
     {accountOpen && <AccountDialog onClose={() => setAccountOpen(false)}/>}

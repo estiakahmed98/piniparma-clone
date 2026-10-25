@@ -12,8 +12,8 @@ export function ProductCard({ product }: { product: Product }) {
   return <article className="product-card">
     <div className="product-media">
       <Link href={`/products/${product.slug}`} aria-label={`View ${product.name}`}>
-        {/* Product SVG is an editable placeholder; replace with JPG/WEBP for the client. */}
-        <img src={product.image} alt={product.name} loading="lazy" />
+        
+        {product.image ? <img src={product.image} alt={product.name} loading="lazy" /> : <div className="image-unavailable">Image coming soon</div>}
       </Link>
       {product.badge && <span className="product-badge">{product.badge}</span>}
       <button className={`favorite-button ${liked ? 'is-active' : ''}`} aria-label={liked ? 'Remove from saved items' : 'Save to favorites'} aria-pressed={liked} onClick={() => toggleFavorite(product.id)}>

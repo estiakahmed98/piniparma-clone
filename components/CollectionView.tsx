@@ -30,8 +30,8 @@ export function CollectionView({ category }: Props) {
       if (colors.length && !colors.includes(p.color)) return false;
       if (sizes.length && !p.sizes.some((s) => sizes.includes(s))) return false;
       if (seasons.length && !seasons.includes(p.season)) return false;
-      if (minPrice !== '' && p.price < Number(minPrice)) return false;
-      if (maxPrice !== '' && p.price > Number(maxPrice)) return false;
+      if (minPrice !== '' && (p.price === null || p.price < Number(minPrice))) return false;
+      if (maxPrice !== '' && (p.price === null || p.price > Number(maxPrice))) return false;
       if (quickFilter) {
         if (quickFilter === 'All' || quickFilter === 'All Season') return true;
         if (COLORS.includes(quickFilter)) return p.color === quickFilter;
@@ -40,8 +40,8 @@ export function CollectionView({ category }: Props) {
       }
       return true;
     });
-    if (sort === 'price-asc') result = [...result].sort((a,b) => a.price - b.price);
-    if (sort === 'price-desc') result = [...result].sort((a,b) => b.price - a.price);
+    if (sort === 'price-asc') result = [...result].sort((a,b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+    if (sort === 'price-desc') result = [...result].sort((a,b) => (b.price ?? -Infinity) - (a.price ?? -Infinity));
     if (sort === 'az') result = [...result].sort((a,b) => a.name.localeCompare(b.name));
     return result;
   // allProducts derived from the static data source; dependency category captures its identity.
