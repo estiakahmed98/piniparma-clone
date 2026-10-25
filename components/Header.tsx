@@ -205,8 +205,13 @@ export function Header() {
             aria-label="Aura BOED homepage"
             onMouseEnter={() => setMenu(null)}
           >
-            <span>Aura BOED</span>
-            <small>MODERN ESSENTIALS</small>
+            <img
+              className="nav-brand-wordmark"
+              src="/AURA_BOED_Logo.svg"
+              alt="Aura BOED"
+              width={190}
+              height={57}
+            />
           </Link>
           <div className="header-right">
             <button
@@ -438,7 +443,14 @@ export function Header() {
             onMouseDown={(e) => e.stopPropagation()}
           >
             <div className="drawer-head">
-              <span className="mobile-brand">Aura BOED</span>
+              <span className="mobile-brand">
+                <img
+                  src="/AURA_BOED_Logo.svg"
+                  alt="Aura BOED"
+                  width={170}
+                  height={55}
+                />
+              </span>
               <button
                 aria-label="Close menu"
                 onClick={() => setMobileOpen(false)}

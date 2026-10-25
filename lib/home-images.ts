@@ -1,5 +1,5 @@
 export const homeImages = {
-  hero: "/editorial/hero.webp",
+  hero: "/images/Coastal Stone Terrace Elegance.png",
   tailoring: "/editorial/tailoring.webp",
   suits: "/editorial/suits.webp",
   accessories: "/editorial/accessories.webp",
@@ -9,5 +9,5 @@ export const homeImages = {
   shoes: "/editorial/shoes.webp",
   trousers: "/editorial/trousers.webp",
   story: "/editorial/story.webp",
-  summer: "/editorial/summer.webp",
+  summer: "/images/Long Days, Lighter Layers.png",
 } as const;

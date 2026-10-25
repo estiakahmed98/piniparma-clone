@@ -1,11 +1,12 @@
 import type { SVGProps } from 'react';
 
-export type IconName = 'search' | 'bookmark' | 'bag' | 'user' | 'menu' | 'close' | 'arrow-right' | 'arrow-left' | 'chevron-down' | 'sliders' | 'grid-four' | 'grid-two' | 'grid-one' | 'plus' | 'minus' | 'check' | 'instagram' | 'facebook' | 'truck' | 'shield' | 'rotate' | 'map-pin' | 'youtube' | 'tiktok' | 'x' | 'pinterest';
+export type IconName = 'search' | 'bookmark' | 'bag' | 'user' | 'menu' | 'close' | 'arrow-right' | 'arrow-left' | 'chevron-down' | 'sliders' | 'grid-four' | 'grid-two' | 'grid-one' | 'plus' | 'minus' | 'check' | 'instagram' | 'facebook' | 'truck' | 'shield' | 'rotate' | 'map-pin' | 'youtube' | 'tiktok' | 'x' | 'pinterest' | 'zoom-in';
 
 export function Icon({ name, size = 19, strokeWidth = 1.5, ...rest }: { name: IconName; size?: number; strokeWidth?: number } & SVGProps<SVGSVGElement>) {
   const common = { fill: 'none', stroke: 'currentColor', strokeWidth, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
   let content;
   switch (name) {
+    case 'zoom-in': content = <><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M7 10h6M10 7v6"/></>; break;
     case 'search': content = <><circle cx="11" cy="11" r="7"/><path d="m16.4 16.4 4.1 4.1"/></>; break;
     case 'bookmark': content = <path d="M6 3.5h12v17l-6-4-6 4z"/>; break;
     case 'bag': content = <><path d="M4 8h16l-1 13H5L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></>; break;

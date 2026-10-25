@@ -2984,3 +2984,11 @@ main {
     padding: 15px 12px;
   }
 }
+
+/* Supplied Aura BOED brand assets */
+.site-header .brand-logo { top: 0; height: 57px; flex-direction: row; gap: 2px; }
+.nav-brand-icon { width: 32px; height: 32px; object-fit: cover; border-radius: 5px; flex-shrink: 0; }
+.nav-brand-wordmark { width: 190px; height: 57px; object-fit: cover; }
+.storefront-home .header-wrap:not(.header-scrolled):not(:has(.mega-menu)) .nav-brand-wordmark { filter: brightness(0) invert(1); }
+@media (max-width: 800px) { .site-header .brand-logo { height: 59px; } .nav-brand-icon { width: 27px; height: 27px; } .nav-brand-wordmark { width: 150px; height: 55px; } }
+@media (max-width: 380px) { .nav-brand-wordmark { width: 125px; } .nav-brand-icon { width: 24px; height: 24px; } }

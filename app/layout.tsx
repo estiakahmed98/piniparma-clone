@@ -6,6 +6,10 @@ import { Storefront } from '@/components/Storefront';
 
 
 export const metadata: Metadata = {
+  icons: {
+    icon: { url: '/favicon.png', type: 'image/png' },
+    shortcut: '/favicon.png',
+  },
   title: { default: 'Aura BOED | Modern Tailoring & Contemporary Essentials', template: '%s | Aura BOED' },
   description: 'An elegant showcase storefront for Aura BOED: modern tailoring, contemporary essentials, and considered style.',
 };
