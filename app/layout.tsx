@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { StoreProvider } from '@/components/StoreProvider';
 import { Storefront } from '@/components/Storefront';
+import { BackToTop } from '@/components/BackToTop';
 
 
 
@@ -17,5 +18,5 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   // Browser extensions can add attributes to <html> before React hydrates.
   // Keep suppression at this element so mismatches inside the app stay visible.
-  return <html lang="en" suppressHydrationWarning><body><StoreProvider><Storefront>{children}</Storefront></StoreProvider></body></html>;
+  return <html lang="en" suppressHydrationWarning><body><StoreProvider><Storefront>{children}</Storefront><BackToTop /></StoreProvider></body></html>;
 }

@@ -110,9 +110,10 @@ main {
 }
 .header-left > a,
 .header-right > .desktop-nav,
+.header-right > .account-trigger,
 .cart-button,
 .language-button {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #111;
 }
@@ -1572,8 +1573,9 @@ main {
     gap: 15px;
   }
   .header-left > a,
-  .header-right .desktop-nav {
-    font-size: 11px;
+  .header-right .desktop-nav,
+  .header-right .account-trigger {
+    font-size: 16px;
   }
   .subcategory-scroll {
     justify-content: flex-start;
@@ -2004,8 +2006,30 @@ main {
 .account-trigger {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
   padding: 4px 0;
+}
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #ffffff50;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 4px 18px #0002;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  background: #45483f;
+}
+.back-to-top:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
 }
 .account-trigger svg {
   display: none;
