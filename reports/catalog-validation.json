@@ -1,16 +1,17 @@
 {
   "version": 1,
   "productCountBefore": 503,
-  "productCountAfter": 503,
-  "generatedDemoPrices": 503,
-  "generatedDemoStocks": 503,
-  "generatedDescriptions": 503,
-  "unverifiedSizes": 503,
-  "categoryReviewProducts": 24,
-  "missingImageProducts": 165,
+  "productCountAfter": 338,
+  "removedProductCount": 165,
+  "generatedDemoPrices": 338,
+  "generatedDemoStocks": 338,
+  "generatedDescriptions": 338,
+  "unverifiedSizes": 338,
+  "categoryReviewProducts": 15,
+  "missingImageProducts": 0,
   "missingMediaPaths": 0,
   "duplicateGalleryProducts": 0,
-  "unresolvedProductDetails": 503,
+  "unresolvedProductDetails": 338,
   "backendMappedProducts": 0,
   "records": [
     {
@@ -69,18 +70,6 @@
       ]
     },
     {
-      "id": "anthracite-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "anthracite-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "anthracite-merinos-turtleneck-made-in-italy",
       "slug": "anthracite-merinos-turtleneck-made-in-italy",
       "collection": "knitwear",
@@ -96,18 +85,6 @@
       "slug": "avio-blue-micro-fancy-pocket-square-made-in-italy",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "avio-blue-soragna-trousers-made-in-italy",
-      "slug": "avio-blue-soragna-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -159,70 +136,10 @@
       ]
     },
     {
-      "id": "beige-and-light-grey-fancy-pocket-square-made-in-italy",
-      "slug": "beige-and-light-grey-fancy-pocket-square-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-and-white-runners-made-in-italy",
       "slug": "beige-and-white-runners-made-in-italy",
       "collection": "shoes",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cable-knit-full-zip-made-in-italy",
-      "slug": "beige-cable-knit-full-zip-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cable-turtleneck-made-in-italy",
-      "slug": "beige-cable-turtleneck-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cardigan-made-in-italy",
-      "slug": "beige-cardigan-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cashmere-rib-knit-beanie-made-in-italy",
-      "slug": "beige-cashmere-rib-knit-beanie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -252,58 +169,10 @@
       ]
     },
     {
-      "id": "beige-cotton-and-linen-garda-trousers-mad-2ea8aae1",
-      "slug": "beige-cotton-and-linen-garda-trousers-mad-2ea8aae1",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cotton-and-linen-garda-trousers-made-in-italy",
-      "slug": "beige-cotton-and-linen-garda-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cotton-and-silk-trousers-made-in-italy",
-      "slug": "beige-cotton-and-silk-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-cotton-bomber-made-in-italy",
       "slug": "beige-cotton-bomber-made-in-italy",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-cotton-silk-bomber-made-in-italy",
-      "slug": "beige-cotton-silk-bomber-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -356,34 +225,10 @@
       ]
     },
     {
-      "id": "beige-flannel-roma-trousers-made-in-italy",
-      "slug": "beige-flannel-roma-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-flannel-trousers-soragna-capsule-co-a6b21e8c",
       "slug": "beige-flannel-trousers-soragna-capsule-co-a6b21e8c",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "beige-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -402,18 +247,6 @@
       ]
     },
     {
-      "id": "beige-herringbone-suit-made-in-italy",
-      "slug": "beige-herringbone-suit-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-hooded-bomber-made-in-italy",
       "slug": "beige-hooded-bomber-made-in-italy",
       "collection": "jackets",
@@ -425,58 +258,10 @@
       ]
     },
     {
-      "id": "beige-jacquard-patterned-turtleneck-made-in-italy",
-      "slug": "beige-jacquard-patterned-turtleneck-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-jersey-merino-shirt-made-in-italy",
       "slug": "beige-jersey-merino-shirt-made-in-italy",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-knitted-vest-made-in-italy",
-      "slug": "beige-knitted-vest-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-linen-blend-straight-denim-made-in-italy",
-      "slug": "beige-linen-blend-straight-denim-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-linen-overshirt-made-in-italy",
-      "slug": "beige-linen-overshirt-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -506,18 +291,6 @@
       ]
     },
     {
-      "id": "beige-luxury-cardigan-made-in-italy",
-      "slug": "beige-luxury-cardigan-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-nabuk-and-suede-runners-made-in-italy",
       "slug": "beige-nabuk-and-suede-runners-made-in-italy",
       "collection": "shoes",
@@ -530,46 +303,10 @@
       ]
     },
     {
-      "id": "beige-nabuk-sneakers-made-in-italy",
-      "slug": "beige-nabuk-sneakers-made-in-italy",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-nuvola-jacket-made-in-italy",
       "slug": "beige-nuvola-jacket-made-in-italy",
       "collection": "suits",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-padded-vest-made-in-italy",
-      "slug": "beige-padded-vest-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-parka-made-in-italy",
-      "slug": "beige-parka-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -588,58 +325,10 @@
       ]
     },
     {
-      "id": "beige-polo-coat-in-loro-piana-wool-made-in-italy",
-      "slug": "beige-polo-coat-in-loro-piana-wool-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-prince-of-wales-jacket-made-in-italy",
       "slug": "beige-prince-of-wales-jacket-made-in-italy",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-quilted-vest-made-in-italy",
-      "slug": "beige-quilted-vest-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-ribbed-half-zip-sweater-made-in-italy",
-      "slug": "beige-ribbed-half-zip-sweater-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-ribbed-turtleneck-made-in-italy",
-      "slug": "beige-ribbed-turtleneck-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -662,30 +351,6 @@
       "slug": "beige-soragna-trousers-made-in-italy-1",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-striped-collar-detail-knitted-t-shi-1f3e884e",
-      "slug": "beige-striped-collar-detail-knitted-t-shi-1f3e884e",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-striped-collar-detail-knitted-t-shirt-made-in-italy",
-      "slug": "beige-striped-collar-detail-knitted-t-shirt-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -737,30 +402,6 @@
       ]
     },
     {
-      "id": "beige-super-180s-wool-flannel-bomber-jacket-made-in-italy",
-      "slug": "beige-super-180s-wool-flannel-bomber-jacket-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "beige-super-durable-wool-short-socks-made-in-italy",
-      "slug": "beige-super-durable-wool-short-socks-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "beige-trail-sneakers-made-in-italy",
       "slug": "beige-trail-sneakers-made-in-italy",
       "collection": "shoes",
@@ -794,18 +435,6 @@
       ]
     },
     {
-      "id": "beige-wool-and-cashmere-padded-jacket-made-in-italy",
-      "slug": "beige-wool-and-cashmere-padded-jacket-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "black-cashmere-lined-deerskin-leather-glo-07c4341a",
       "slug": "black-cashmere-lined-deerskin-leather-glo-07c4341a",
       "collection": "accessories",
@@ -830,32 +459,6 @@
       ]
     },
     {
-      "id": "black-cashmere-lined-deerskin-leather-gloves-made-in-italy",
-      "slug": "black-cashmere-lined-deerskin-leather-gloves-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
-      ]
-    },
-    {
-      "id": "black-cashmere-lined-deerskin-leather-gloves-made-in-italy-1",
-      "slug": "black-cashmere-lined-deerskin-leather-gloves-made-in-italy-1",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
-      ]
-    },
-    {
       "id": "black-cufflinks-and-dress-studs-set",
       "slug": "black-cufflinks-and-dress-studs-set",
       "collection": "suits",
@@ -871,18 +474,6 @@
       "slug": "black-cufflinks-and-dress-studs-set-with-fcd8ac69",
       "collection": "suits",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "black-cufflinks-and-dress-studs-set-with-swarovski-detail",
-      "slug": "black-cufflinks-and-dress-studs-set-with-swarovski-detail",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -945,34 +536,10 @@
       ]
     },
     {
-      "id": "black-merino-turtleneck-made-in-italy",
-      "slug": "black-merino-turtleneck-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "black-oxfords",
       "slug": "black-oxfords",
       "collection": "shoes",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "black-silk-bow-tie-made-in-italy",
-      "slug": "black-silk-bow-tie-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1002,66 +569,6 @@
       ]
     },
     {
-      "id": "black-tassel-loafer-made-in-italy",
-      "slug": "black-tassel-loafer-made-in-italy",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "black-tuxedo-oxfords",
-      "slug": "black-tuxedo-oxfords",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "black-tuxedo-suit-made-in-italy",
-      "slug": "black-tuxedo-suit-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "bleached-candiani-cotton-tapered-jeans-ma-2d0e699d",
-      "slug": "bleached-candiani-cotton-tapered-jeans-ma-2d0e699d",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "bleached-candiani-cotton-tapered-jeans-made-in-italy",
-      "slug": "bleached-candiani-cotton-tapered-jeans-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-and-white-micro-fancy-scarf-made-in-italy",
       "slug": "blue-and-white-micro-fancy-scarf-made-in-italy",
       "collection": "trousers",
@@ -1084,46 +591,10 @@
       ]
     },
     {
-      "id": "blue-blazer-in-cashmere-made-in-italy",
-      "slug": "blue-blazer-in-cashmere-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-bomber-jacket-made-in-italy",
       "slug": "blue-bomber-jacket-made-in-italy",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-cable-turtleneck-made-in-italy",
-      "slug": "blue-cable-turtleneck-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-cardigan-made-in-italy",
-      "slug": "blue-cardigan-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1142,18 +613,6 @@
       ]
     },
     {
-      "id": "blue-cashmere-knitted-bomber-made-in-italy",
-      "slug": "blue-cashmere-knitted-bomber-made-in-italy",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-cashmere-knitted-bomber-with-fur-mad-ba32c3d3",
       "slug": "blue-cashmere-knitted-bomber-with-fur-mad-ba32c3d3",
       "collection": "jackets",
@@ -1165,58 +624,10 @@
       ]
     },
     {
-      "id": "blue-cashmere-knitted-bomber-with-fur-made-in-italy",
-      "slug": "blue-cashmere-knitted-bomber-with-fur-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-cashmere-rib-knit-beanie-made-in-italy",
-      "slug": "blue-cashmere-rib-knit-beanie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-cashmere-turtleneck-made-in-italy",
       "slug": "blue-cashmere-turtleneck-made-in-italy",
       "collection": "knitwear",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-cotton-and-cashmere-garda-trousers-m-da7c2f1c",
-      "slug": "blue-cotton-and-cashmere-garda-trousers-m-da7c2f1c",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-cotton-and-cashmere-garda-trousers-made-in-italy",
-      "slug": "blue-cotton-and-cashmere-garda-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1290,18 +701,6 @@
       ]
     },
     {
-      "id": "blue-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "blue-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-cufflinks-made-in-italy",
       "slug": "blue-cufflinks-made-in-italy",
       "collection": "accessories",
@@ -1339,18 +738,6 @@
       "slug": "blue-down-vest-in-loro-piana-wool-made-in-italy",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-fancy-pocket-square-made-in-italy",
-      "slug": "blue-fancy-pocket-square-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1402,34 +789,10 @@
       ]
     },
     {
-      "id": "blue-flannel-baseball-cap-made-in-italy",
-      "slug": "blue-flannel-baseball-cap-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-flannel-como-trousers-made-in-italy",
       "slug": "blue-flannel-como-trousers-made-in-italy",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-flannel-double-breasted-jacket",
-      "slug": "blue-flannel-double-breasted-jacket",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1459,46 +822,10 @@
       ]
     },
     {
-      "id": "blue-flannel-trousers-limited-edition-made-in-italy",
-      "slug": "blue-flannel-trousers-limited-edition-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-flannel-trousers-soragna-capsule-col-d6742b27",
       "slug": "blue-flannel-trousers-soragna-capsule-col-d6742b27",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-flannel-trousers-soragna-capsule-collection-made-in-italy-1",
-      "slug": "blue-flannel-trousers-soragna-capsule-collection-made-in-italy-1",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-floral-tie-made-in-italy",
-      "slug": "blue-floral-tie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1514,19 +841,6 @@
         "DEMO_PRICE",
         "DEMO_STOCK",
         "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-gloves-made-in-italy",
-      "slug": "blue-gloves-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
       ]
     },
     {
@@ -1552,34 +866,10 @@
       ]
     },
     {
-      "id": "blue-ischia-sunglasses-made-in-italy",
-      "slug": "blue-ischia-sunglasses-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-jacket-in-loro-piana-wool-and-cashme-345a9a1b",
       "slug": "blue-jacket-in-loro-piana-wool-and-cashme-345a9a1b",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "slug": "blue-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1697,18 +987,6 @@
       ]
     },
     {
-      "id": "blue-limited-edition-trousers-made-in-italy",
-      "slug": "blue-limited-edition-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-linen-and-silk-tie-made-in-italy",
       "slug": "blue-linen-and-silk-tie-made-in-italy",
       "collection": "accessories",
@@ -1786,18 +1064,6 @@
       ]
     },
     {
-      "id": "blue-merino-wool-cable-turtleneck",
-      "slug": "blue-merino-wool-cable-turtleneck",
-      "collection": "knitwear",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-merinos-turtleneck-made-in-italy",
       "slug": "blue-merinos-turtleneck-made-in-italy",
       "collection": "knitwear",
@@ -1813,42 +1079,6 @@
       "slug": "blue-micro-fancy-short-socks-made-in-italy",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-micro-fancy-silk-tie-made-in-italy-1",
-      "slug": "blue-micro-fancy-silk-tie-made-in-italy-1",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-micro-fancy-silk-tie-made-in-italy-2",
-      "slug": "blue-micro-fancy-silk-tie-made-in-italy-2",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-micro-floral-tie-made-in-italy",
-      "slug": "blue-micro-floral-tie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1882,54 +1112,6 @@
       "slug": "blue-nabuk-boat-loafers-made-in-italy",
       "collection": "shoes",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-nbuk-and-corduroy-high-sneakers-made-in-italy",
-      "slug": "blue-nbuk-and-corduroy-high-sneakers-made-in-italy",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-nuvola-jacket-made-in-italy-1",
-      "slug": "blue-nuvola-jacket-made-in-italy-1",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-paisley-pocket-squares-made-in-italy-1",
-      "slug": "blue-paisley-pocket-squares-made-in-italy-1",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-paisley-silk-tie-made-in-italy",
-      "slug": "blue-paisley-silk-tie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -1974,18 +1156,6 @@
       "slug": "blue-polo-shirt-made-in-italy",
       "collection": "knitwear",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-popover-shirt-made-in-italy",
-      "slug": "blue-popover-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2114,18 +1284,6 @@
       ]
     },
     {
-      "id": "blue-short-jacket-in-loro-piana-fabric-made-in-italy",
-      "slug": "blue-short-jacket-in-loro-piana-fabric-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-short-jacket-made-in-italy",
       "slug": "blue-short-jacket-made-in-italy",
       "collection": "jackets",
@@ -2141,18 +1299,6 @@
       "slug": "blue-short-sleeved-polo-made-in-italy",
       "collection": "knitwear",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-single-breasted-waistcoat-made-in-italy",
-      "slug": "blue-single-breasted-waistcoat-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2193,46 +1339,10 @@
       ]
     },
     {
-      "id": "blue-striped-brushed-cotton-button-down-shirt-made-in-italy",
-      "slug": "blue-striped-brushed-cotton-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-striped-cotton-and-cashmere-shirt-ma-c7e8901b",
       "slug": "blue-striped-cotton-and-cashmere-shirt-ma-c7e8901b",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-striped-cotton-and-cashmere-shirt-made-in-italy",
-      "slug": "blue-striped-cotton-and-cashmere-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-striped-linen-button-down-shirt-made-in-italy",
-      "slug": "blue-striped-linen-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2251,46 +1361,10 @@
       ]
     },
     {
-      "id": "blue-striped-suit-made-in-italy",
-      "slug": "blue-striped-suit-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-suit-soragna-capsule-collection-made-990fcda9",
       "slug": "blue-suit-soragna-capsule-collection-made-990fcda9",
       "collection": "suits",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-suit-soragna-capsule-collection-made-in-italy-1",
-      "slug": "blue-suit-soragna-capsule-collection-made-in-italy-1",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "blue-super-durable-wool-short-socks-made-in-italy",
-      "slug": "blue-super-durable-wool-short-socks-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2375,18 +1449,6 @@
       ]
     },
     {
-      "id": "blue-wool-and-cashmere-paisley-tie-made-in-italy",
-      "slug": "blue-wool-and-cashmere-paisley-tie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "blue-wool-and-cashmere-polo-made-in-italy",
       "slug": "blue-wool-and-cashmere-polo-made-in-italy",
       "collection": "knitwear",
@@ -2420,58 +1482,10 @@
       ]
     },
     {
-      "id": "blue-wool-knit-bomber-made-in-italy",
-      "slug": "blue-wool-knit-bomber-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "bordeaux-fancy-silk-tie-made-in-italy-1",
-      "slug": "bordeaux-fancy-silk-tie-made-in-italy-1",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "bordeaux-jacket-in-loro-piana-wool-and-ca-48709a17",
       "slug": "bordeaux-jacket-in-loro-piana-wool-and-ca-48709a17",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "bordeaux-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "slug": "bordeaux-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "bordeaux-micro-fancy-pocket-square-made-in-italy",
-      "slug": "bordeaux-micro-fancy-pocket-square-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2490,18 +1504,6 @@
       ]
     },
     {
-      "id": "bordeaux-paisley-pocket-squares-made-in-italy",
-      "slug": "bordeaux-paisley-pocket-squares-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "bordeaux-patterned-socks-made-in-italy",
       "slug": "bordeaux-patterned-socks-made-in-italy",
       "collection": "accessories",
@@ -2513,34 +1515,10 @@
       ]
     },
     {
-      "id": "brown-cashmere-rib-knit-beanie-made-in-italy",
-      "slug": "brown-cashmere-rib-knit-beanie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "brown-flannel-trousers-soragna-capsule-co-0c4114ff",
       "slug": "brown-flannel-trousers-soragna-capsule-co-0c4114ff",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "brown-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "brown-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2563,42 +1541,6 @@
       "slug": "brown-grenadine-silk-tie-hand-made-in-italy",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "brown-loafers-made-in-italy-1",
-      "slug": "brown-loafers-made-in-italy-1",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "brown-oxfords-made-in-italy",
-      "slug": "brown-oxfords-made-in-italy",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "brown-polo-shirt-made-in-italy",
-      "slug": "brown-polo-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2684,18 +1626,6 @@
       ]
     },
     {
-      "id": "brown-wool-and-cashmere-striped-suit-made-in-italy",
-      "slug": "brown-wool-and-cashmere-striped-suit-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "burgundy-fancy-tie-made-in-italy",
       "slug": "burgundy-fancy-tie-made-in-italy",
       "collection": "accessories",
@@ -2741,42 +1671,6 @@
       ]
     },
     {
-      "id": "button-down-denim-shirt-sartoriale-collection-made-in-italy",
-      "slug": "button-down-denim-shirt-sartoriale-collection-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "button-down-grey-brushed-cotton-shirt-mad-2ca0407d",
-      "slug": "button-down-grey-brushed-cotton-shirt-mad-2ca0407d",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "button-down-grey-brushed-cotton-shirt-made-in-italy",
-      "slug": "button-down-grey-brushed-cotton-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "button-down-light-blue-shirt-made-in-italy",
       "slug": "button-down-light-blue-shirt-made-in-italy",
       "collection": "shirts",
@@ -2799,106 +1693,10 @@
       ]
     },
     {
-      "id": "calze-corte-blu",
-      "slug": "calze-corte-blu",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "calze-corte-grigie",
-      "slug": "calze-corte-grigie",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "calze-corte-nere",
-      "slug": "calze-corte-nere",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "calze-lunghe-blu",
-      "slug": "calze-lunghe-blu",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "calze-lunghe-grigie",
-      "slug": "calze-lunghe-grigie",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "calze-lunghe-nere",
-      "slug": "calze-lunghe-nere",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "camel-corduroy-trousers-soragna-capsule-c-687377d9",
       "slug": "camel-corduroy-trousers-soragna-capsule-c-687377d9",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "camel-corduroy-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "camel-corduroy-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "camel-jacket-loro-piana-wool-made-in-italy",
-      "slug": "camel-jacket-loro-piana-wool-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -2940,18 +1738,6 @@
       ]
     },
     {
-      "id": "clear-sunglasses-portofino-made-in-italy",
-      "slug": "clear-sunglasses-portofino-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "cognac-suede-tassel-loafer-made-in-italy",
       "slug": "cognac-suede-tassel-loafer-made-in-italy",
       "collection": "shoes",
@@ -2974,46 +1760,10 @@
       ]
     },
     {
-      "id": "copy-of-white-linen-pocket-square-with-grey-and-beige-edges-made-in-italy",
-      "slug": "copy-of-white-linen-pocket-square-with-grey-and-beige-edges-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "copy-of-white-linen-pocket-square-with-ta-e0280103",
       "slug": "copy-of-white-linen-pocket-square-with-ta-e0280103",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "copy-of-white-linen-pocket-square-with-taupe-and-beige-edges-made-in-italy",
-      "slug": "copy-of-white-linen-pocket-square-with-taupe-and-beige-edges-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "cream-fancy-tie-made-in-italy",
-      "slug": "cream-fancy-tie-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3032,18 +1782,6 @@
       ]
     },
     {
-      "id": "cummerbund-made-in-italy",
-      "slug": "cummerbund-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "dark-blue-denim-shirt-made-in-italy",
       "slug": "dark-blue-denim-shirt-made-in-italy",
       "collection": "shirts",
@@ -3052,19 +1790,6 @@
         "DEMO_PRICE",
         "DEMO_STOCK",
         "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "dark-blue-gloves-made-in-italy",
-      "slug": "dark-blue-gloves-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
       ]
     },
     {
@@ -3083,18 +1808,6 @@
       "slug": "dark-green-flannel-tie-hand-made-in-italy",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "dark-grey-limited-edition-trousers-made-in-italy",
-      "slug": "dark-grey-limited-edition-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3146,18 +1859,6 @@
       ]
     },
     {
-      "id": "denim-soft-wash-chambray-button-down-shirt-made-in-italy",
-      "slug": "denim-soft-wash-chambray-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "denim-strech-soragna-trousers-made-in-italy",
       "slug": "denim-strech-soragna-trousers-made-in-italy",
       "collection": "trousers",
@@ -3166,32 +1867,6 @@
         "DEMO_PRICE",
         "DEMO_STOCK",
         "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "dusty-blue-cashmere-lined-deerskin-leathe-7ac747ab",
-      "slug": "dusty-blue-cashmere-lined-deerskin-leathe-7ac747ab",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
-      ]
-    },
-    {
-      "id": "dusty-blue-cashmere-lined-deerskin-leather-gloves-made-in-italy",
-      "slug": "dusty-blue-cashmere-lined-deerskin-leather-gloves-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
       ]
     },
     {
@@ -3317,34 +1992,10 @@
       ]
     },
     {
-      "id": "green-swimshorts-made-in-italy",
-      "slug": "green-swimshorts-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "green-trousers-soragna-capsule-collection-7cfc9366",
       "slug": "green-trousers-soragna-capsule-collection-7cfc9366",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "green-trousers-soragna-capsule-collection-made-in-italy-1",
-      "slug": "green-trousers-soragna-capsule-collection-made-in-italy-1",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3367,18 +2018,6 @@
       "slug": "grey-brushed-cotton-button-down-shirt-mad-8c1cfb74",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "grey-brushed-cotton-button-down-shirt-made-in-italy",
-      "slug": "grey-brushed-cotton-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3441,18 +2080,6 @@
       ]
     },
     {
-      "id": "grey-flannel-trousers-limited-edition-made-in-italy",
-      "slug": "grey-flannel-trousers-limited-edition-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "grey-flannel-trousers-soragna-capsule-col-2f5cfe4d",
       "slug": "grey-flannel-trousers-soragna-capsule-col-2f5cfe4d",
       "collection": "trousers",
@@ -3464,34 +2091,10 @@
       ]
     },
     {
-      "id": "grey-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "grey-flannel-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "grey-ischia-sunglasses-made-in-italy",
       "slug": "grey-ischia-sunglasses-made-in-italy",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "grey-leather-backpack-made-in-italy",
-      "slug": "grey-leather-backpack-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3576,34 +2179,10 @@
       ]
     },
     {
-      "id": "grey-striped-brushed-cotton-button-down-shirt-made-in-italy",
-      "slug": "grey-striped-brushed-cotton-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "grey-striped-cotton-and-cashmere-shirt-ma-7e1d5706",
       "slug": "grey-striped-cotton-and-cashmere-shirt-ma-7e1d5706",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "grey-striped-cotton-and-cashmere-shirt-made-in-italy",
-      "slug": "grey-striped-cotton-and-cashmere-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3646,18 +2225,6 @@
       ]
     },
     {
-      "id": "houndstooth-shirt-made-in-italy",
-      "slug": "houndstooth-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "ice-strech-soragna-trousers-made-in-italy",
       "slug": "ice-strech-soragna-trousers-made-in-italy",
       "collection": "trousers",
@@ -3692,30 +2259,6 @@
       ]
     },
     {
-      "id": "light-blue-bamboo-button-down-shirt-sarto-e5cf192e",
-      "slug": "light-blue-bamboo-button-down-shirt-sarto-e5cf192e",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-blue-bamboo-button-down-shirt-sartoriale-collection-made-in-italy",
-      "slug": "light-blue-bamboo-button-down-shirt-sartoriale-collection-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-blue-basketweave-shirt-made-in-italy",
       "slug": "light-blue-basketweave-shirt-made-in-italy",
       "collection": "shirts",
@@ -3738,34 +2281,10 @@
       ]
     },
     {
-      "id": "light-blue-bleached-comfort-jeans-candiani-cotton-made-in-italy",
-      "slug": "light-blue-bleached-comfort-jeans-candiani-cotton-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-blue-brushed-cotton-button-down-shi-331adcfe",
       "slug": "light-blue-brushed-cotton-button-down-shi-331adcfe",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-blue-brushed-cotton-button-down-shirt-made-in-italy",
-      "slug": "light-blue-brushed-cotton-button-down-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -3872,18 +2391,6 @@
       ]
     },
     {
-      "id": "light-blue-garment-dyed-linen-shirt-made-in-italy-copy",
-      "slug": "light-blue-garment-dyed-linen-shirt-made-in-italy-copy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-blue-jeans-made-in-italy",
       "slug": "light-blue-jeans-made-in-italy",
       "collection": "trousers",
@@ -3921,30 +2428,6 @@
       "slug": "light-blue-jersey-shirt-made-in-italy-1",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-blue-premium-cotton-sartoriale-shir-dbff312a",
-      "slug": "light-blue-premium-cotton-sartoriale-shir-dbff312a",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-blue-premium-cotton-sartoriale-shirt-made-in-italy",
-      "slug": "light-blue-premium-cotton-sartoriale-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4018,18 +2501,6 @@
       ]
     },
     {
-      "id": "light-green-tapered-linen-blend-jeans-made-in-italy",
-      "slug": "light-green-tapered-linen-blend-jeans-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-grey-5-pocket-trousers-made-in-italy",
       "slug": "light-grey-5-pocket-trousers-made-in-italy",
       "collection": "trousers",
@@ -4074,34 +2545,10 @@
       ]
     },
     {
-      "id": "light-grey-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "light-grey-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-grey-herringbone-cotton-and-tencel-130d9112",
       "slug": "light-grey-herringbone-cotton-and-tencel-130d9112",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-grey-herringbone-cotton-and-tencel-shirt-made-in-italy",
-      "slug": "light-grey-herringbone-cotton-and-tencel-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4186,34 +2633,10 @@
       ]
     },
     {
-      "id": "light-grey-striped-linen-and-tencel-shirt-made-in-italy",
-      "slug": "light-grey-striped-linen-and-tencel-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-grey-super-durable-wool-short-socks-dba31dce",
       "slug": "light-grey-super-durable-wool-short-socks-dba31dce",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-grey-super-durable-wool-short-socks-made-in-italy",
-      "slug": "light-grey-super-durable-wool-short-socks-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4232,46 +2655,10 @@
       ]
     },
     {
-      "id": "light-grey-wool-and-cotton-roma-trousers-made-in-italy",
-      "slug": "light-grey-wool-and-cotton-roma-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-sage-mercerized-cotton-shirt-made-in-italy",
-      "slug": "light-sage-mercerized-cotton-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "light-sage-striped-linen-and-tencel-shirt-e6257cb4",
       "slug": "light-sage-striped-linen-and-tencel-shirt-e6257cb4",
       "collection": "shirts",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "light-sage-striped-linen-and-tencel-shirt-made-in-italy",
-      "slug": "light-sage-striped-linen-and-tencel-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4312,34 +2699,10 @@
       ]
     },
     {
-      "id": "luxury-denim-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "luxury-denim-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "mastic-cotton-and-cashmere-garda-trousers-05aa2b42",
       "slug": "mastic-cotton-and-cashmere-garda-trousers-05aa2b42",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "mastic-cotton-and-cashmere-garda-trousers-made-in-italy",
-      "slug": "mastic-cotton-and-cashmere-garda-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4362,18 +2725,6 @@
       "slug": "mid-blue-tapered-jeans-candiani-cotton-ma-8aaa6948",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "mid-blue-tapered-jeans-candiani-cotton-made-in-italy",
-      "slug": "mid-blue-tapered-jeans-candiani-cotton-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4458,18 +2809,6 @@
       ]
     },
     {
-      "id": "off-white-cashmere-blend-jogger-pants-made-in-italy",
-      "slug": "off-white-cashmere-blend-jogger-pants-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "off-white-corduroy-milano-trousers-made-in-italy",
       "slug": "off-white-corduroy-milano-trousers-made-in-italy",
       "collection": "trousers",
@@ -4496,18 +2835,6 @@
       "slug": "off-white-cotton-and-cashmere-sirmione-tr-04994704",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "off-white-cotton-and-cashmere-sirmione-trousers-made-in-italy",
-      "slug": "off-white-cotton-and-cashmere-sirmione-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4614,19 +2941,6 @@
       ]
     },
     {
-      "id": "perfume-made-in-italy",
-      "slug": "perfume-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
-      ]
-    },
-    {
       "id": "plum-glen-check-suit-made-in-italy",
       "slug": "plum-glen-check-suit-made-in-italy",
       "collection": "suits",
@@ -4653,18 +2967,6 @@
       "slug": "pocketsquare-white-grey-linen",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "pocketsquare-white-lightblue-linen",
-      "slug": "pocketsquare-white-lightblue-linen",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4760,46 +3062,10 @@
       ]
     },
     {
-      "id": "sand-canvas-leather-briefcase-made-in-italy",
-      "slug": "sand-canvas-leather-briefcase-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "sand-canvas-leather-weekender-bag-made-in-italy",
-      "slug": "sand-canvas-leather-weekender-bag-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "sand-cotton-trousers-soragna-capsule-coll-fd2d6ec8",
       "slug": "sand-cotton-trousers-soragna-capsule-coll-fd2d6ec8",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "sand-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "sand-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4855,42 +3121,6 @@
       "slug": "sand-suede-sneaker-made-in-italy",
       "collection": "shoes",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "sartorial-button-down-chambray-striped-sh-1ad4570f",
-      "slug": "sartorial-button-down-chambray-striped-sh-1ad4570f",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "sartorial-button-down-chambray-striped-shirt-made-in-italy",
-      "slug": "sartorial-button-down-chambray-striped-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "sartorial-light-blue-shirt-made-in-italy",
-      "slug": "sartorial-light-blue-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -4997,18 +3227,6 @@
       ]
     },
     {
-      "id": "sky-grey-prince-of-wales-jacket-made-in-italy",
-      "slug": "sky-grey-prince-of-wales-jacket-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "stone-limited-edition-trousers-made-in-italy",
       "slug": "stone-limited-edition-trousers-made-in-italy",
       "collection": "trousers",
@@ -5043,35 +3261,10 @@
       ]
     },
     {
-      "id": "suit-hanger",
-      "slug": "suit-hanger",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
-      ]
-    },
-    {
       "id": "taupe-and-white-nabuk-and-suede-runners-m-1f76e551",
       "slug": "taupe-and-white-nabuk-and-suede-runners-m-1f76e551",
       "collection": "shoes",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "taupe-and-white-nabuk-and-suede-runners-made-in-italy",
-      "slug": "taupe-and-white-nabuk-and-suede-runners-made-in-italy",
-      "collection": "shoes",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -5146,18 +3339,6 @@
       ]
     },
     {
-      "id": "taupe-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "taupe-cotton-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "taupe-fancy-pocket-square-made-in-italy",
       "slug": "taupe-fancy-pocket-square-made-in-italy",
       "collection": "accessories",
@@ -5195,30 +3376,6 @@
       "slug": "taupe-jacket-in-loro-piana-wool-and-cashm-eb1eab28",
       "collection": "jackets",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "taupe-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "slug": "taupe-jacket-in-loro-piana-wool-and-cashmere-made-in-italy",
-      "collection": "jackets",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "taupe-leather-weekender-bag-made-in-italy",
-      "slug": "taupe-leather-weekender-bag-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -5326,18 +3483,6 @@
       ]
     },
     {
-      "id": "turtle-sunglasses-capri-made-in-italy",
-      "slug": "turtle-sunglasses-capri-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "turtle-sunglasses-portofino-made-in-italy",
       "slug": "turtle-sunglasses-portofino-made-in-italy",
       "collection": "accessories",
@@ -5357,19 +3502,6 @@
         "DEMO_PRICE",
         "DEMO_STOCK",
         "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "wardrobe-perfumers-made-in-italy",
-      "slug": "wardrobe-perfumers-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW",
-        "CATEGORY_REVIEW"
       ]
     },
     {
@@ -5417,34 +3549,10 @@
       ]
     },
     {
-      "id": "white-corduroy-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "white-corduroy-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "white-cotton-and-linen-garda-trousers-mad-3a7b89b4",
       "slug": "white-cotton-and-linen-garda-trousers-mad-3a7b89b4",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-cotton-and-linen-garda-trousers-made-in-italy",
-      "slug": "white-cotton-and-linen-garda-trousers-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -5472,18 +3580,6 @@
         "DEMO_STOCK",
         "DESCRIPTION_REVIEW",
         "CATEGORY_REVIEW"
-      ]
-    },
-    {
-      "id": "white-cotton-stretch-trousers-soragna-capsule-collection-made-in-italy",
-      "slug": "white-cotton-stretch-trousers-soragna-capsule-collection-made-in-italy",
-      "collection": "trousers",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
       ]
     },
     {
@@ -5553,34 +3649,10 @@
       ]
     },
     {
-      "id": "white-linen-beige-and-red-line-pocket-square-made-in-italy",
-      "slug": "white-linen-beige-and-red-line-pocket-square-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "white-linen-pocket-square-with-blue-and-l-10370200",
       "slug": "white-linen-pocket-square-with-blue-and-l-10370200",
       "collection": "accessories",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-linen-pocket-square-with-blue-and-light-blue-edges-made-in-italy",
-      "slug": "white-linen-pocket-square-with-blue-and-light-blue-edges-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -5599,46 +3671,10 @@
       ]
     },
     {
-      "id": "white-linen-pocket-square-with-grey-and-cognac-edges-made-in-italy",
-      "slug": "white-linen-pocket-square-with-grey-and-cognac-edges-made-in-italy",
-      "collection": "accessories",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
       "id": "white-linen-soragna-trousers-made-in-italy",
       "slug": "white-linen-soragna-trousers-made-in-italy",
       "collection": "trousers",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-premium-cotton-sartoriale-shirt-mad-15e8d541",
-      "slug": "white-premium-cotton-sartoriale-shirt-mad-15e8d541",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-premium-cotton-sartoriale-shirt-made-in-italy",
-      "slug": "white-premium-cotton-sartoriale-shirt-made-in-italy",
-      "collection": "shirts",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",
@@ -5694,30 +3730,6 @@
       "slug": "white-tuxedo-made-in-italy",
       "collection": "suits",
       "issues": [
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-tuxedo-pique-bib-front-shirt-made-in-italy",
-      "slug": "white-tuxedo-pique-bib-front-shirt-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
-        "UNVERIFIED_SIZES",
-        "DEMO_PRICE",
-        "DEMO_STOCK",
-        "DESCRIPTION_REVIEW"
-      ]
-    },
-    {
-      "id": "white-tuxedo-shirt-made-in-italy",
-      "slug": "white-tuxedo-shirt-made-in-italy",
-      "collection": "suits",
-      "issues": [
-        "MISSING_IMAGES",
         "UNVERIFIED_SIZES",
         "DEMO_PRICE",
         "DEMO_STOCK",

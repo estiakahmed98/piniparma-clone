@@ -134,6 +134,6 @@ Tailwind CSS v4 runs through `@tailwindcss/postcss`. All page and component styl
 
 ## Commerce integration preparation
 
-All 503 original catalogue records are retained. Prices and stock are labeled demo estimates; confirmed sellable sizes remain empty until reviewed. Real checkout is disabled. For local/API mode setup, the actual backend schema audit, proposed versioned contracts, mapping manifest, validation reports and remaining blockers, read [docs/commerce-integration.md](docs/commerce-integration.md).
+The active catalogue contains 338 products with images. At the user's request, 165 products without images were removed from the JSON catalogue. Prices and stock are labeled demo estimates; confirmed sellable sizes remain empty until reviewed. Real checkout is disabled. For local/API mode setup, the actual backend schema audit, proposed versioned contracts, mapping manifest, validation reports and remaining blockers, read [docs/commerce-integration.md](docs/commerce-integration.md).
 
 Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build`. After installing a Playwright browser with `npx playwright install chromium`, run `npm run test:e2e` to test local and API-fixture modes at desktop and mobile widths. API-fixture results do not mean a live backend/database is connected.

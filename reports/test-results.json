@@ -20,9 +20,10 @@
   "catalogue": {
     "jsonSchema": "passed",
     "originalCount": 503,
-    "preparedCount": 503,
+    "preparedCount": 338,
     "identityAndMediaPreservation": "passed",
-    "deterministicGenerationAndIdempotency": "passed"
+    "deterministicGenerationAndIdempotency": "passed",
+    "removedWithoutImages": 165
   },
   "unitAndContractTests": {
     "command": "npm test",
@@ -52,7 +53,8 @@
       "checkout block",
       "private token isolation",
       "no demo fallback during a backend outage"
-    ]
+    ],
+    "status": "pending-recheck-after-pruning"
   },
   "visualReview": {
     "desktopAndMobileScreenshotsInspected": true,
@@ -69,7 +71,6 @@
   "pending": [
     "database-backed catalogue import and ID mapping",
     "price, size, description and source-category review",
-    "165 missing-image records",
     "guest cart ownership and server synchronization",
     "shipping/COD/warehouse reservation/idempotency end-to-end integration"
   ]

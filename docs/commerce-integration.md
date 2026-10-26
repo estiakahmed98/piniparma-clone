@@ -7,18 +7,20 @@ This branch prepares the frontend and contracts. **A live General E-commerce bac
 | Check | Result |
 | --- | ---: |
 | Original records | 503 |
-| Prepared records | 503 |
+| Prepared records | 338 |
 | Previously exposed by the image-only frontend | 338 |
-| Generated demo prices | 503 |
-| Generated demo stock quantities | 503 |
-| Generated descriptions awaiting review | 503 |
-| Products with unverified sizes | 503 |
-| Missing-image products retained with placeholders | 165 |
+| Generated demo prices | 338 |
+| Generated demo stock quantities | 338 |
+| Generated descriptions awaiting review | 338 |
+| Products with unverified sizes | 338 |
+| Missing-image products in the active catalogue | 0 |
 | Missing paths among existing media | 0 |
 | Duplicate gallery arrays | 0 |
-| Source-category anomalies requiring review | 24 |
-| Products with unresolved details | 503 |
+| Source-category anomalies requiring review | 15 |
+| Products with unresolved details | 338 |
 | Verified backend mappings | 0 |
+
+The source originally contained 503 records. At the user's request, 165 products without images were deleted from the active JSON catalogue. The 338 remaining records retain their original data and fingerprints; `manifest.removedProducts` records only removed IDs/slugs and the reason, and `originalCount` remains 503 for audit history.
 
 `reports/catalog-validation.json` lists the issues for every record. Its counts describe the complete prepared catalogue, rather than just changes in the most recent run. Product IDs, slugs, names, original categories/hierarchy, main images, galleries, videos, source URLs and existing metadata remain intact. `data/commerce-import-manifest.json` stores immutable source fingerprints and full original-record hashes; tests verify identity and media preservation. The pipeline fails if IDs/slugs collide, protected fields change, existing official prices/stock are invalid, or product count changes unexpectedly.
 
@@ -145,8 +147,8 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-The preparation phase must pass catalogue JSON schema/integrity checks, adapter contract tests, and local/API-fixture browser tests. Playwright runs desktop (1440px) and mobile (390px) scenarios against a production build. It checks retained homepage media/layout, scroll-triggered video, search, filtered listings, pagination, missing-image details, exact variant prices/stock, guest-cart persistence and the checkout block. API fixtures also verify private-token isolation, query forwarding and absence of demo fallback during an outage. `PLAYWRIGHT_CHROMIUM_EXECUTABLE` optionally selects an existing Chromium/Chrome executable. These are contract and UI checks, **not live backend/database end-to-end tests or an approved pixel-perfect screenshot baseline**.
+The preparation phase must pass catalogue JSON schema/integrity checks, adapter contract tests, and local/API-fixture browser tests. Playwright runs desktop (1440px) and mobile (390px) scenarios against a production build. It checks retained homepage media/layout, scroll-triggered video, search, filtered listings, pagination, removed-product 404s and pictured product details, exact variant prices/stock, guest-cart persistence and the checkout block. API fixtures also verify private-token isolation, query forwarding and absence of demo fallback during an outage. `PLAYWRIGHT_CHROMIUM_EXECUTABLE` optionally selects an existing Chromium/Chrome executable. These are contract and UI checks, **not live backend/database end-to-end tests or an approved pixel-perfect screenshot baseline**.
 
-Before live connection: implement/review the versioned backend facade; import and verify all product/category/variant IDs; verify all demo prices/descriptions and the 165 missing image records; confirm sizes and warehouse inventory; resolve the 24 category anomalies; implement the guest-cart ownership boundary and COD facade around existing business logic; then run real database-backed checkout/reservation/shipping/idempotency tests. Real order creation and payment settings stay disabled until that review passes. No Admin, SCM, Investor or Business Network integrations were added.
+Before live connection: implement/review the versioned backend facade; import and verify all product/category/variant IDs; verify all demo prices/descriptions ; confirm sizes and warehouse inventory; resolve the 15 category anomalies; implement the guest-cart ownership boundary and COD facade around existing business logic; then run real database-backed checkout/reservation/shipping/idempotency tests. Real order creation and payment settings stay disabled until that review passes. No Admin, SCM, Investor or Business Network integrations were added.
 
 See `reports/test-results.json` for the final verification record and `reports/changed-files.txt` for the exact delivery file list.

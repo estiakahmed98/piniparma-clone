@@ -62,7 +62,11 @@ test("server filtering, pagination, search and every product detail remain acces
   page,
   request,
 }) => {
-  await page.goto("/collections/suits", { waitUntil: "domcontentloaded" });
+  const initial = await request.get(
+    "/api/commerce/products?category=trousers&limit=24",
+  );
+  const total = (await initial.json()).pagination.total;
+  await page.goto("/collections/trousers", { waitUntil: "domcontentloaded" });
   await expect(page.locator(".product-card")).toHaveCount(24);
   const responsePromise = page.waitForResponse(
     (r) =>
@@ -83,7 +87,9 @@ test("server filtering, pagination, search and every product detail remain acces
   await expect(
     page.getByRole("navigation", { name: "Collection pages" }),
   ).toContainText("Page 2");
-  await expect(page.locator(".product-card")).toHaveCount(4);
+  await expect(page.locator(".product-card")).toHaveCount(
+    Math.min(24, total - 24),
+  );
   await page
     .getByRole("button", { name: "Search products", exact: true })
     .click();
@@ -91,20 +97,27 @@ test("server filtering, pagination, search and every product detail remain acces
     .getByPlaceholder("Search for a product or collection...")
     .fill("navy");
   await expect(page.locator(".search-results a").first()).toBeVisible();
-  const missing = catalog.products.find((p) => !p.image)!;
-  await page.goto(`/products/${missing.slug}`, {
+  const product = catalog.products[0];
+  await page.goto(`/products/${product.slug}`, {
     waitUntil: "domcontentloaded",
   });
-  await expect(page.locator(".product-detail h1")).toHaveText(missing.name);
-  await expect(page.locator(".product-gallery")).toContainText(/coming soon/i);
+  await expect(page.locator(".product-detail h1")).toHaveText(product.name);
+  await expect(page.locator(".gallery-image-button").first()).toBeVisible();
   await expect(page.locator(".product-detail")).toContainText(
     "Demo price estimate",
   );
   await expect(page.locator(".add-bag")).toBeDisabled();
+  await page.goto(
+    "/products/beige-and-light-grey-fancy-pocket-square-made-in-italy",
+    { waitUntil: "domcontentloaded" },
+  );
+  await expect(
+    page.getByRole("heading", { name: "Nothing here, yet." }),
+  ).toBeVisible();
   const denied = await request.post("/api/commerce/checkout", {
     data: { total: 1, price: 1, variantId: 1 },
   });
   expect(denied.status()).toBe(409);
   const all = await request.get("/api/commerce/products?limit=48");
-  expect((await all.json()).pagination.total).toBe(503);
+  expect((await all.json()).pagination.total).toBe(catalog.total);
 });

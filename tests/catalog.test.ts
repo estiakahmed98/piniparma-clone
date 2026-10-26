@@ -16,13 +16,21 @@ import {
   collectionFor,
 } from "../lib/commerce-local";
 
-test("all 503 records satisfy JSON schema, unique identities and immutable source fingerprints", () => {
+test("all active records satisfy JSON schema, unique identities and immutable source fingerprints", () => {
   const validate = new Ajv({ allErrors: true, strict: false }).compile(schema);
   assert.equal(validate(catalog), true, JSON.stringify(validate.errors));
-  assert.equal(catalog.products.length, manifest.originalCount);
-  assert.equal(localProducts.length, 503);
-  assert.equal(new Set(catalog.products.map((p) => p.id)).size, 503);
-  assert.equal(new Set(catalog.products.map((p) => p.slug)).size, 503);
+  assert.equal(catalog.total, manifest.activeCount);
+  assert.equal(
+    catalog.products.length + manifest.removedProducts.length,
+    manifest.originalCount,
+  );
+  assert.equal(catalog.products.length, catalog.total);
+  assert.equal(localProducts.length, catalog.total);
+  assert.equal(new Set(catalog.products.map((p) => p.id)).size, catalog.total);
+  assert.equal(
+    new Set(catalog.products.map((p) => p.slug)).size,
+    catalog.total,
+  );
   for (const product of catalog.products) {
     const entry = manifest.products.find((p) => p.frontendId === product.id)!;
     const record = product as unknown as Record<string, unknown>;
@@ -141,7 +149,7 @@ test("category/search/price/color filters, sorting and disjoint pagination opera
   );
   assert.equal(localHome().featured.length, 4);
   assert.ok(
-    localProducts.some((p) => !p.image),
-    "missing images retain product records",
+    localProducts.every((p) => p.image && p.images.length > 0),
+    "every listed product has a main image and gallery",
   );
 });
