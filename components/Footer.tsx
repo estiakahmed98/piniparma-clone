@@ -352,7 +352,9 @@ export function Footer() {
                     "aura-analytics-consent",
                     String(analytics),
                   );
-                } catch {}
+                } catch {
+                  /* Consent persistence is optional when storage is unavailable. */
+                }
                 setInformation("");
               }}
             >

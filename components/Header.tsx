@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { products, collectionImage, formatPrice } from "@/lib/products";
+import { formatPrice, type Product, type Collection } from "@/lib/products";
+import { fetchCatalogue } from "@/lib/commerce-browser";
 import { Icon } from "./Icons";
 import { useStore } from "./StoreProvider";
 import { AccountDialog } from "./AccountDialog";
@@ -22,7 +23,9 @@ const clothingLinks = [
   ["Waistcoats", "/collections/suits"],
   ["View All", "/collections/suits"],
 ];
-const menuContent = {
+const buildMenuContent = (
+  collectionImage: (category: Collection) => string,
+) => ({
   Clothing: {
     title: "CLOTHING",
     links: clothingLinks,
@@ -94,10 +97,24 @@ const menuContent = {
     promoHref: "/collections/accessories",
     image: collectionImage("accessories"),
   },
-};
+});
 
 export function Header() {
-  const { cartCount, setCartOpen, favorites } = useStore();
+  const {
+    cartCount,
+    setCartOpen,
+    favorites,
+    products,
+    registerProducts,
+    catalogue,
+  } = useStore();
+  const menuContent = buildMenuContent(
+    (category) => catalogue.collectionImages[category] || "",
+  );
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState("");
+  const [wishlistError, setWishlistError] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState<MenuName>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -132,15 +149,58 @@ export function Header() {
     document.addEventListener("keydown", key);
     return () => document.removeEventListener("keydown", key);
   }, []);
-  const searchResults = search.trim()
-    ? products
-        .filter((p) =>
-          `${p.name} ${p.category} ${p.color}`
-            .toLowerCase()
-            .includes(search.toLowerCase()),
-        )
-        .slice(0, 6)
-    : products.filter((p) => p.featured).slice(0, 4);
+  useEffect(() => {
+    if (!searchOpen) return;
+    const controller = new AbortController();
+    setSearchLoading(true);
+    setSearchError("");
+    const timer = setTimeout(() => {
+      void fetchCatalogue(
+        {
+          q: search.trim() || undefined,
+          group: search.trim() ? undefined : "featured",
+          limit: 6,
+        },
+        controller.signal,
+      )
+        .then((page) => {
+          if (!controller.signal.aborted) {
+            setSearchResults(page.products);
+            registerProducts(page.products);
+          }
+        })
+        .catch(() => {
+          if (!controller.signal.aborted) {
+            setSearchError("Search is temporarily unavailable.");
+            setSearchResults([]);
+          }
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setSearchLoading(false);
+        });
+    }, 200);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [search, searchOpen, registerProducts]);
+  useEffect(() => {
+    if (!wishlistOpen || !favorites.length) return;
+    const controller = new AbortController();
+    setWishlistError("");
+    void fetchCatalogue(
+      { ids: favorites.slice(0, 48), limit: 48 },
+      controller.signal,
+    )
+      .then((page) => {
+        if (!controller.signal.aborted) registerProducts(page.products);
+      })
+      .catch(() => {
+        if (!controller.signal.aborted)
+          setWishlistError("Saved pieces could not be refreshed.");
+      });
+    return () => controller.abort();
+  }, [wishlistOpen, favorites, registerProducts]);
   const savedProducts = products.filter((p) => favorites.includes(p.id));
   const activeMenu = menu ? menuContent[menu] : null;
 
@@ -295,7 +355,7 @@ export function Header() {
             <div className="mega-column p-[20px_20px_26px] [border-right:1px_solid_#e7e7e7] [overflow-y:auto] [&_h3]:[font-size:12px] [&_h3]:tracking-[0.22em] [&_h3]:[font-weight:var(--font-weight-bold,_700)] [&_h3]:[border-bottom:1px_solid_#e7e7e7] [&_h3]:p-[0_0_10px] [&_h3]:m-[0_0_10px] mega-feature [&_.mini-product]:flex [&_.mini-product]:items-center [&_.mini-product]:gap-[14px] [&_.mini-product]:m-[0_0_9px] [&_.mini-product]:min-h-[130px] [&_.mini-product_img]:w-[116px] [&_.mini-product_img]:h-[126px] [&_.mini-product_img]:object-cover [&_.mini-product_img]:[background:#eee] [&_.mini-product_span]:[font-size:12px] [&_.mini-product_span]:leading-[1.6] [&_.mini-product_span]:[color:#696664] [&_.mini-product_strong]:block [&_.mini-product_strong]:[text-decoration:underline] [&_.mini-product_strong]:[text-underline-offset:5px] [&_.mini-product_strong]:[color:#20201f] [&_.mini-product_strong]:[font-size:12px] [&_.mini-product_strong]:mt-[7px] max-[1150.01px]:[&_.mini-product_img]:w-[85px] max-[1150.01px]:[&_.mini-product_img]:h-[105px] max-[1150.01px]:[&_.mini-product]:min-h-[107px] max-[1150.01px]:[&_.mini-product_span]:[font-size:11px]">
               <h3>BEST-SELLING ESSENTIALS</h3>
               {products
-                .filter((p) => p.image)
+                .filter((p) => p.bestSelling && p.image)
                 .slice(0, 3)
                 .map((p) => (
                   <Link
@@ -375,6 +435,8 @@ export function Header() {
                 ? `RESULTS (${searchResults.length})`
                 : "THE SELECTION OF THE MOMENT"}
             </h3>
+            {searchLoading && <p role="status">Searching the collection...</p>}
+            {searchError && <p role="alert">{searchError}</p>}
             <div className="search-results grid grid-cols-[repeat(4,_1fr)] gap-[15px] [&_>_a]:flex [&_>_a]:gap-[12px] [&_>_a]:items-center [&_>_a]:[font-size:12px] [&_img]:w-[68px] [&_img]:h-[90px] [&_img]:object-cover [&_small]:block [&_small]:mt-[7px] [&_small]:[color:var(--muted)] max-[800.01px]:grid-cols-[repeat(2,_1fr)]">
               {searchResults.length ? (
                 searchResults.map((p) => (
@@ -424,6 +486,11 @@ export function Header() {
                 <Icon name="close" />
               </button>
             </div>
+            {wishlistError && (
+              <p role="alert" className="px-5">
+                {wishlistError}
+              </p>
+            )}
             {savedProducts.length ? (
               <div className="wishlist-items p-[20px] [&_>_a]:flex [&_>_a]:items-center [&_>_a]:gap-[15px] [&_>_a]:mb-[15px] [&_>_a]:[font-size:13px] [&_img]:w-[80px] [&_img]:h-[105px] [&_img]:object-cover [&_small]:block [&_small]:[color:var(--muted)] [&_small]:mt-[10px]">
                 {savedProducts.map((p) => (

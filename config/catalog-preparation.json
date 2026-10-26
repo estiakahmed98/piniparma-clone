@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "currency": "BDT",
+  "stock": {
+    "min": 20,
+    "max": 100
+  },
+  "priceBands": [
+    {
+      "name": "hangers",
+      "categoryMatch": "(?!)",
+      "nameMatch": "hanger",
+      "min": 650,
+      "max": 2000,
+      "step": 50
+    },
+    {
+      "name": "home-fragrance",
+      "categoryMatch": "(?!)",
+      "nameMatch": "candle|fragrance|perfume",
+      "min": 1500,
+      "max": 6500,
+      "step": 100
+    },
+    {
+      "name": "tuxedos",
+      "min": 24000,
+      "max": 65000,
+      "step": 500,
+      "categoryMatch": "Tuxedos",
+      "nameMatch": "tuxedo|eveningwear"
+    },
+    {
+      "name": "suits",
+      "min": 18000,
+      "max": 55000,
+      "step": 500,
+      "categoryMatch": "Suits",
+      "nameMatch": "\\bsuit\\b(?!\\s+hanger)"
+    },
+    {
+      "name": "coats",
+      "min": 14000,
+      "max": 42000,
+      "step": 500,
+      "categoryMatch": "Outerwear",
+      "nameMatch": "outerwear|overcoat|\\bcoat\\b"
+    },
+    {
+      "name": "jackets",
+      "min": 8500,
+      "max": 28000,
+      "step": 250,
+      "categoryMatch": "Jackets|Waistcoats",
+      "nameMatch": "jackets|\\bjacket\\b|waistcoat"
+    },
+    {
+      "name": "shoes",
+      "min": 8500,
+      "max": 24000,
+      "step": 250,
+      "categoryMatch": "Shoes",
+      "nameMatch": "shoes|loafer|oxford|derby|boot|runners"
+    },
+    {
+      "name": "trousers",
+      "min": 4500,
+      "max": 12500,
+      "step": 250,
+      "categoryMatch": "Trousers|Swimwear",
+      "nameMatch": "\\btrousers\\b(?!\\s+hanger)|swim shorts"
+    },
+    {
+      "name": "polos",
+      "min": 3500,
+      "max": 8500,
+      "step": 250,
+      "categoryMatch": "(?!)",
+      "nameMatch": "\\bpolo\\b"
+    },
+    {
+      "name": "shirts",
+      "min": 3500,
+      "max": 9500,
+      "step": 250,
+      "categoryMatch": "Shirts",
+      "nameMatch": "shirts|\\bshirt\\b"
+    },
+    {
+      "name": "knitwear",
+      "min": 5500,
+      "max": 16500,
+      "step": 250,
+      "categoryMatch": "Knitwear",
+      "nameMatch": "knitwear|homewear|knitted|cardigan"
+    },
+    {
+      "name": "socks",
+      "min": 700,
+      "max": 1800,
+      "step": 50,
+      "categoryMatch": "Socks",
+      "nameMatch": "socks"
+    },
+    {
+      "name": "ties",
+      "min": 1500,
+      "max": 4500,
+      "step": 100,
+      "categoryMatch": "Ties|Pocket Squares",
+      "nameMatch": "ties|\\btie\\b|pocket squares"
+    },
+    {
+      "name": "leather",
+      "min": 3500,
+      "max": 12000,
+      "step": 250,
+      "categoryMatch": "Leather Goods",
+      "nameMatch": "leather goods"
+    },
+    {
+      "name": "accessories",
+      "min": 1800,
+      "max": 6500,
+      "step": 100,
+      "categoryMatch": ".*",
+      "nameMatch": ".*"
+    }
+  ],
+  "candidateSizes": {
+    "suits": ["44", "46", "48", "50", "52", "54", "56"],
+    "jackets": ["44", "46", "48", "50", "52", "54", "56"],
+    "shirts": ["S", "M", "L", "XL", "XXL"],
+    "trousers": ["30", "32", "34", "36", "38"],
+    "knitwear": ["S", "M", "L", "XL", "XXL"],
+    "shoes": ["39", "40", "41", "42", "43", "44", "45"],
+    "accessories": []
+  }
+}

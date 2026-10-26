@@ -1,0 +1,76 @@
+{
+  "testedOn": "2026-10-26",
+  "timezone": "Asia/Dhaka",
+  "runtime": "v26.11.1",
+  "typecheck": {
+    "command": "npm run typecheck",
+    "status": "passed"
+  },
+  "lint": {
+    "command": "npm run lint",
+    "status": "passed",
+    "tool": "ESLint with TypeScript and Next.js rules",
+    "warnings": 0
+  },
+  "productionBuild": {
+    "command": "npm run build",
+    "status": "passed",
+    "nextVersion": "15.5.28"
+  },
+  "catalogue": {
+    "jsonSchema": "passed",
+    "originalCount": 503,
+    "preparedCount": 503,
+    "identityAndMediaPreservation": "passed",
+    "deterministicGenerationAndIdempotency": "passed"
+  },
+  "unitAndContractTests": {
+    "command": "npm test",
+    "passed": 11,
+    "failed": 0
+  },
+  "browserTests": {
+    "command": "npm run test:e2e",
+    "passed": 10,
+    "failed": 0,
+    "viewportWidths": [
+      1440,
+      390
+    ],
+    "modes": [
+      "local",
+      "api-contract-fixture"
+    ],
+    "checks": [
+      "homepage layout geometry and media",
+      "scroll-triggered story video",
+      "mobile navigation",
+      "server filtering, sorting, search and pagination",
+      "missing-image product details",
+      "variant price, stock and unavailable combinations",
+      "exact variant ID guest persistence",
+      "checkout block",
+      "private token isolation",
+      "no demo fallback during a backend outage"
+    ]
+  },
+  "visualReview": {
+    "desktopAndMobileScreenshotsInspected": true,
+    "approvedPixelBaseline": false
+  },
+  "liveBackend": {
+    "status": "pending",
+    "reason": "Versioned facade and verified product/category/variant import mappings are not yet implemented in General E-commerce."
+  },
+  "realCheckout": {
+    "enabled": false,
+    "testedAgainstDatabase": false
+  },
+  "pending": [
+    "database-backed catalogue import and ID mapping",
+    "price, size, description and source-category review",
+    "165 missing-image records",
+    "guest cart ownership and server synchronization",
+    "shipping/COD/warehouse reservation/idempotency end-to-end integration"
+  ]
+}

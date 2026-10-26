@@ -6,7 +6,7 @@ A complete **Next.js App Router + TypeScript** storefront demo. The design follo
 
 ## Requirements
 
-- Node.js 20.9+ (Node.js 22 LTS recommended)
+- Node.js 20.19+, 22.13+, or 24+ (Node.js LTS recommended)
 - npm
 - Internet access for the first `npm install`
 
@@ -117,17 +117,23 @@ python scripts/generate_placeholders.py
 2. Click **Suits** and check title, category links, product count, 4-column images.
 3. Open **Filter**, select color Grey, then **SHOW PRODUCTS**. The listing should narrow.
 4. Sort by **Price: Low to High**, verify prices ascend.
-5. Click a product, choose size 42, quantity 2, **ADD TO BAG**. Cart opens with quantity 2.
+5. Local products show demo price labels and unverified availability. They cannot add invented sizes to a cart. API-contract tests exercise verified Size + Color variants and guest bag persistence.
 6. Reload the page. Cart quantity and saved items should remain in that browser.
 7. Open search and type **navy**, then click a result.
 8. Test around 390px wide (Chrome DevTools) for mobile navigation and 2-column listing.
 
 ## Scope note
 
-This is an original **visual demo** based on the supplied reference screens, not a copy of proprietary site scripts or images. Exact photo-level parity requires adding your client's authentic product and editorial photos. No API keys or environment variables required.
+This is an original **visual demo** based on the supplied reference screens, not a copy of proprietary site scripts or images. Exact photo-level parity requires adding your client's authentic product and editorial photos. Local mode requires no API key. API mode uses private server configuration; see the integration guide.
 
 ## Styling
 
 Tailwind CSS v4 runs through `@tailwindcss/postcss`. All page and component styles live in JSX `className` utilities, including responsive layouts, hover/focus states, pseudo-elements, and dynamic state variants.
 
 `app/tailwind.css` contains only Tailwind imports and the media marquee animation theme. There are no component stylesheets or `@apply` rules. Fonts load from the root layout, which also defines shared design tokens as Tailwind utilities. Preflight is omitted to preserve the storefront's existing browser defaults.
+
+## Commerce integration preparation
+
+All 503 original catalogue records are retained. Prices and stock are labeled demo estimates; confirmed sellable sizes remain empty until reviewed. Real checkout is disabled. For local/API mode setup, the actual backend schema audit, proposed versioned contracts, mapping manifest, validation reports and remaining blockers, read [docs/commerce-integration.md](docs/commerce-integration.md).
+
+Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build`. After installing a Playwright browser with `npx playwright install chromium`, run `npm run test:e2e` to test local and API-fixture modes at desktop and mobile widths. API-fixture results do not mean a live backend/database is connected.

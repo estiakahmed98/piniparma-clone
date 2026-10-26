@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { collectionImage } from "@/lib/products";
+import { useStore } from "./StoreProvider";
 import { Icon } from "./Icons";
 
 type AccountMode = "login" | "signup" | "reset";
 
 export function AccountDialog({ onClose }: { onClose: () => void }) {
+  const { catalogue } = useStore();
   const router = useRouter();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [mode, setMode] = useState<AccountMode>("login");
@@ -81,7 +82,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
     >
       <div className="auth-layout grid grid-cols-[0.85fr_1.15fr] min-h-[640px] max-[700.01px]:grid-cols-[1fr] max-[700.01px]:min-h-[0]">
         <aside className="auth-editorial relative isolate overflow-hidden [background:#b8aa97] min-h-[100%] [&_>_img]:absolute [&_>_img]:w-[100%] [&_>_img]:h-[100%] [&_>_img]:object-cover [&_>_img]:object-[50%_40%] [&_>_img]:z-[-2] [&:after]:[content:''] [&:after]:absolute [&:after]:inset-[0] [&:after]:[background:linear-gradient(180deg,_#26231e30,_transparent_30%,_#26231ebd)] [&:after]:z-[-1] max-[700.01px]:hidden">
-          <img src={collectionImage("suits")} alt="" />
+          <img src={catalogue.collectionImages.suits || undefined} alt="" />
           <div className="auth-editorial-top p-[30px] [font-family:var(--serif)] [font-size:32px] [color:white] leading-[1.15] [&_>_span]:block [&_>_span]:mt-[10px] [&_>_span]:[font-family:var(--sans)] [&_>_span]:[font-size:8px] [&_>_span]:tracking-[0.23em]">
             Aura BOED<span>THE ART OF DRESSING WELL</span>
           </div>
