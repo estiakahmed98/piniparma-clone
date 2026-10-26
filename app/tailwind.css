@@ -1,0 +1,13 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --animate-media-drift: media-drift 35s linear infinite;
+
+  @keyframes media-drift {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}

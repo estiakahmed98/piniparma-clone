@@ -91,7 +91,7 @@ python scripts/generate_placeholders.py
 - Footer and newsletter demo: `components/Footer.tsx`
 - Homepage marketing copy and categories: `app/page.tsx`
 - Site metadata/title: `app/layout.tsx`
-- Typography, colors, spacing, product grid, breakpoints: `app/globals.css`
+- Typography, colors, spacing, product grid, breakpoints: inline Tailwind classes in `app/` and `components/`; shared tokens in `app/layout.tsx`
 - Currency: `formatPrice()` in `lib/products.ts` (currently BDT `৳`)
 
 ## Functionality implemented (client-side demo)
@@ -125,3 +125,9 @@ python scripts/generate_placeholders.py
 ## Scope note
 
 This is an original **visual demo** based on the supplied reference screens, not a copy of proprietary site scripts or images. Exact photo-level parity requires adding your client's authentic product and editorial photos. No API keys or environment variables required.
+
+## Styling
+
+Tailwind CSS v4 runs through `@tailwindcss/postcss`. All page and component styles live in JSX `className` utilities, including responsive layouts, hover/focus states, pseudo-elements, and dynamic state variants.
+
+`app/tailwind.css` contains only Tailwind imports and the media marquee animation theme. There are no component stylesheets or `@apply` rules. Fonts load from the root layout, which also defines shared design tokens as Tailwind utilities. Preflight is omitted to preserve the storefront's existing browser defaults.
