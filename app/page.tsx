@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeMotion } from "@/components/HomeMotion";
 import { ProductCard } from "@/components/ProductCard";
 import { Icon } from "@/components/Icons";
 import { products } from "@/lib/products";
@@ -88,7 +89,7 @@ const media = ["NOBLEMAN", "Forbes", "Esquire", "GQ", "THE RAKE", "VOGUE"];
 
 export default function Home() {
   return (
-    <div className="editorial-home [--editorial-gap:3px]">
+    <HomeMotion>
       <section
         className="campaign-hero h-[100svh] min-h-[680px] relative mt-[-91px] [background:#65685e] [color:white] isolate max-[700.01px]:mt-[-90px] max-[700.01px]:min-h-[640px] max-[700.01px]:max-h-[950px]"
         aria-labelledby="campaign-title"
@@ -137,7 +138,10 @@ export default function Home() {
             alt="Refined tailoring from the Aura BOED edit"
             loading="lazy"
           />
-          <div className="sticky-editorial-copy absolute bottom-[40px] left-[5%] right-[5%] [&_h2]:[font-family:var(--sans)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(36px,_4.2vw,_82px)] [&_h2]:tracking-[-0.055em] [&_h2]:leading-[1.08] [&_h2]:m-[18px_0_26px] max-[1000.01px]:[&_h2]:[font-size:40px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[30px] max-[700.01px]:[&_h2]:[font-size:48px]">
+          <div
+            data-reveal=""
+            className="sticky-editorial-copy absolute bottom-[40px] left-[5%] right-[5%] [&_h2]:[font-family:var(--sans)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(36px,_4.2vw,_82px)] [&_h2]:tracking-[-0.055em] [&_h2]:leading-[1.08] [&_h2]:m-[18px_0_26px] max-[1000.01px]:[&_h2]:[font-size:40px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[30px] max-[700.01px]:[&_h2]:[font-size:48px]"
+          >
             <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
               CONSIDERED IN EVERY DETAIL
             </span>
@@ -166,7 +170,10 @@ export default function Home() {
         className="collection-mosaic"
         aria-labelledby="collection-mosaic-title"
       >
-        <div className="editorial-section-heading text-center p-[95px_20px_60px] [&_.editorial-kicker]:[color:#89887c] [&_.editorial-kicker]:[font-size:9px] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-size:clamp(34px,_3.6vw,_60px)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:tracking-[-0.025em] [&_h2]:m-[15px_0_13px] [&_p]:[color:#8d8d83] [&_p]:[font-size:12px] [&_p]:m-[0] max-[700.01px]:p-[65px_24px_35px] max-[700.01px]:[&_h2]:[font-size:39px] max-[700.01px]:[&_p]:[font-size:11px] max-[700.01px]:[&_p]:leading-[1.8]">
+        <div
+          data-reveal=""
+          className="editorial-section-heading text-center p-[95px_20px_60px] [&_.editorial-kicker]:[color:#89887c] [&_.editorial-kicker]:[font-size:9px] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-size:clamp(34px,_3.6vw,_60px)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:tracking-[-0.025em] [&_h2]:m-[15px_0_13px] [&_p]:[color:#8d8d83] [&_p]:[font-size:12px] [&_p]:m-[0] max-[700.01px]:p-[65px_24px_35px] max-[700.01px]:[&_h2]:[font-size:39px] max-[700.01px]:[&_p]:[font-size:11px] max-[700.01px]:[&_p]:leading-[1.8]"
+        >
           <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
             A WARDROBE, WELL CONSIDERED
           </span>
@@ -178,6 +185,7 @@ export default function Home() {
         <div className="mosaic-grid grid grid-cols-[repeat(12,_minmax(0,_1fr))] gap-[var(--editorial-gap)] max-[700.01px]:grid-cols-[repeat(2,_minmax(0,_1fr))]">
           {categoryTiles.map((tile) => (
             <Link
+              data-reveal=""
               key={tile.label}
               href={tile.href}
               className={`mosaic-tile relative h-[clamp(400px,_44vw,_760px)] isolate overflow-hidden [color:white] [background:#dad8d0] [&_img]:absolute [&_img]:inset-[0] [&_img]:w-[100%] [&_img]:h-[100%] [&_img]:object-cover [&_img]:object-[50%_25%] [&_img]:z-[-2] [&_img]:[transition:transform_0.7s_ease] [&:hover_img]:[transform:scale(1.025)] [&::after]:[content:''] [&::after]:absolute [&::after]:inset-[0] [&::after]:z-[-1] [&::after]:[background:linear-gradient(0deg,_#16201c88,_transparent_55%)] motion-reduce:[&_img]:[transition:none] ${tile.className}`}
@@ -199,32 +207,45 @@ export default function Home() {
         className="collection-story grid grid-cols-[1fr_1fr] gap-[0] p-[80px_12px] [scroll-margin-top:80px] max-[700.01px]:grid-cols-[1fr] max-[700.01px]:p-[45px_0_60px]"
         id="our-story"
       >
-        <div className="collection-story-image h-[clamp(600px,_58vw,_1000px)] [background:#e8e8e2] [&_img]:w-[100%] [&_img]:h-[100%] [&_img]:object-cover [&_img]:object-[center_20%] max-[700.01px]:h-[620px]">
-          <img
-            src={homeImages.story}
-            alt="A closer look at the textures of Italian knitwear"
-            loading="lazy"
+        <div
+          data-reveal=""
+          className="collection-story-image h-[clamp(600px,_58vw,_1000px)] overflow-hidden bg-[#e8e8e2] max-[700.01px]:h-[620px]"
+        >
+          <video
+            className="h-full w-full object-cover object-[center_20%]"
+            data-story-video
+            data-src={homeImages.story}
+            aria-label="A closer look at the textures of Italian knitwear"
+            muted
+            loop
+            playsInline
+            controls
+            preload="none"
           />
         </div>
         <div className="collection-story-copy [align-self:center] p-[60px_10%] [&_.editorial-kicker]:[color:#8b8c80] [&_.editorial-kicker]:[font-size:9px] [&_h2]:[font-size:clamp(36px,_3.3vw,_60px)] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:leading-[1.08] [&_h2]:tracking-[-0.025em] [&_h2]:m-[24px_0_30px] [&_p]:max-w-[540px] [&_p]:[font-size:13px] [&_p]:leading-[1.9] [&_p]:[color:#7d8075] [&_p]:mb-[22px] [&_p.collection-story-detail]:[font-size:11px] [&_p.collection-story-detail]:[color:#454d41] [&_p.collection-story-detail]:m-[30px_0] max-[1000.01px]:p-[40px_9%] max-[700.01px]:p-[45px_7%_0] max-[700.01px]:[&_h2]:[font-size:43px] max-[700.01px]:[&_h2]:m-[18px_0_24px] max-[700.01px]:[&_p]:[font-size:12px]">
-          <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
+          <span
+            data-reveal="100"
+            className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]"
+          >
             THE KNITWEAR COLLECTION
           </span>
-          <h2>
+          <h2 data-reveal="200">
             Exceptional texture.
             <br />
             Effortless character.
           </h2>
-          <p>
+          <p data-reveal="300">
             Quietly distinctive pieces for the way you live. Explore soft
             knitwear, considered proportions and the easy elegance of a
             well-chosen layer.
           </p>
-          <p className="collection-story-detail">
+          <p data-reveal="300" className="collection-story-detail">
             From fine knits to textured favourites, discover the pieces that
             bring your wardrobe together.
           </p>
           <Link
+            data-reveal="400"
             href="/collections/knitwear"
             className="editorial-button min-h-[50px] min-w-[245px] inline-flex items-center justify-between gap-[35px] p-[16px_24px] [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.04em] [transition:background_0.2s,_color_0.2s] max-[1000.01px]:min-w-[205px] max-[1000.01px]:p-[15px_19px] max-[1000.01px]:[font-size:9px] max-[1000.01px]:gap-[20px] button-dark-outline [border:1px_solid_#343731] [color:#343731] [&:hover]:[background:#343731] [&:hover]:[color:#fff]"
           >
@@ -243,7 +264,10 @@ export default function Home() {
           loading="lazy"
         />
         <div className="campaign-shade absolute inset-[0] z-[-1] [background:linear-gradient(90deg,_#161d1a66_0%,_#161d1a08_75%),_linear-gradient(0deg,_#111a205c,_transparent_65%)]" />
-        <div className="summer-copy absolute bottom-[12%] left-[4%] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(65px,_7.5vw,_140px)] [&_h2]:leading-[0.92] [&_h2]:tracking-[-0.035em] [&_h2]:m-[20px_0_24px] [&_p]:[font-size:12px] [&_p]:mb-[30px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h2]:[font-size:75px] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px]">
+        <div
+          data-reveal=""
+          className="summer-copy absolute bottom-[12%] left-[4%] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(65px,_7.5vw,_140px)] [&_h2]:leading-[0.92] [&_h2]:tracking-[-0.035em] [&_h2]:m-[20px_0_24px] [&_p]:[font-size:12px] [&_p]:mb-[30px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h2]:[font-size:75px] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px]"
+        >
           <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
             LONG DAYS. LIGHTER LAYERS.
           </span>
@@ -303,6 +327,6 @@ export default function Home() {
           Media mastheads shown for design preview.
         </p>
       </section>
-    </div>
+    </HomeMotion>
   );
 }

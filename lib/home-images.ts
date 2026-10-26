@@ -8,6 +8,6 @@ export const homeImages = {
   knitwear: "/editorial/knitwear.webp",
   shoes: "/editorial/shoes.webp",
   trousers: "/editorial/trousers.webp",
-  story: "/editorial/story.webp",
+  story: "/images/story.mp4",
   summer: "/images/Long Days, Lighter Layers.png",
 } as const;
