@@ -47,14 +47,26 @@
       "scroll-triggered story video",
       "mobile navigation",
       "server filtering, sorting, search and pagination",
-      "missing-image product details",
+      "pictured product details and removed-product not-found state",
       "variant price, stock and unavailable combinations",
       "exact variant ID guest persistence",
       "checkout block",
       "private token isolation",
       "no demo fallback during a backend outage"
     ],
-    "status": "pending-recheck-after-pruning"
+    "status": "passed",
+    "afterCataloguePruning": {
+      "command": "npm run test:e2e -- --project=local-desktop --project=local-mobile --grep \"server filtering\"",
+      "passed": 2,
+      "failed": 0,
+      "checks": [
+        "filtered and paginated listings",
+        "search",
+        "pictured product details",
+        "removed pocket-square URL displays not found",
+        "active catalogue count is 338"
+      ]
+    }
   },
   "visualReview": {
     "desktopAndMobileScreenshotsInspected": true,

@@ -19,6 +19,12 @@ import type {
 } from "@/lib/commerce-types";
 import { canAddVariant } from "@/lib/commerce-adapter";
 import { fetchCatalogue } from "@/lib/commerce-browser";
+import {
+  createDemoCartLine,
+  canUpdateCartLine,
+  cartLineUnitPrice,
+  type DemoSelection,
+} from "@/lib/commerce-cart";
 
 type Shell = {
   products: Product[];
@@ -36,6 +42,7 @@ type StoreContextValue = {
     product: Product,
     variant: CommerceVariant | undefined,
     quantity?: number,
+    selection?: DemoSelection,
   ) => string | null;
   updateQuantity: (key: string, quantity: number) => void;
   removeFromCart: (key: string) => void;
@@ -47,6 +54,8 @@ type StoreContextValue = {
   catalogue: Shell;
   cartError: string;
   checkoutReady: false;
+  cartHydrated: boolean;
+  clearDemoCart: () => void;
 };
 const StoreContext = createContext<StoreContextValue | null>(null);
 const CART_STORAGE = "aura-commerce-cart-v2";
@@ -103,14 +112,18 @@ export function StoreProvider({
               line,
             ): line is {
               productId: string;
-              backendVariantId: number;
+              backendVariantId: number | null;
+              size?: string;
+              color?: string;
               quantity: number;
               dataSource: DataSource;
             } =>
               !!line &&
               typeof line === "object" &&
               typeof line.productId === "string" &&
-              Number.isSafeInteger(line.backendVariantId) &&
+              (line.dataSource === "local"
+                ? line.backendVariantId === null
+                : Number.isSafeInteger(line.backendVariantId)) &&
               Number.isSafeInteger(line.quantity) &&
               line.quantity > 0 &&
               line.dataSource === initialCatalogue.dataSource,
@@ -126,6 +139,18 @@ export function StoreProvider({
         const restored: CartLine[] = [];
         for (const line of saved) {
           const product = page.products.find((p) => p.id === line.productId);
+          if (product?.dataSource === "local") {
+            const demo = createDemoCartLine(product, line.quantity, {
+              size:
+                typeof line.size === "string" && line.size !== "Size to confirm"
+                  ? line.size
+                  : undefined,
+              color: typeof line.color === "string" ? line.color : undefined,
+            });
+            if (demo && !restored.some((item) => item.key === demo.key))
+              restored.push(demo);
+            continue;
+          }
           const variant = product?.variants.find(
             (v) => v.backendVariantId === line.backendVariantId,
           );
@@ -138,6 +163,7 @@ export function StoreProvider({
           const key = `${product.backendProductId}:${variant.backendVariantId}`;
           if (restored.some((item) => item.key === key)) continue;
           restored.push({
+            isDemo: false,
             key,
             productId: product.id,
             productSlug: product.slug,
@@ -172,12 +198,23 @@ export function StoreProvider({
       localStorage.setItem(
         CART_STORAGE,
         JSON.stringify(
-          cart.map(({ productId, backendVariantId, quantity, dataSource }) => ({
-            productId,
-            backendVariantId,
-            quantity,
-            dataSource,
-          })),
+          cart.map(
+            ({
+              productId,
+              backendVariantId,
+              quantity,
+              dataSource,
+              size,
+              color,
+            }) => ({
+              productId,
+              backendVariantId,
+              size,
+              color,
+              quantity,
+              dataSource,
+            }),
+          ),
         ),
       );
     } catch {
@@ -197,12 +234,46 @@ export function StoreProvider({
     product: Product,
     variant: CommerceVariant | undefined,
     quantity = 1,
+    selection: DemoSelection = {},
   ) => {
+    if (!hydrated) return "Your bag is still loading. Please try again.";
+    if (
+      initialCatalogue.dataSource === "local" &&
+      product.dataSource === "local"
+    ) {
+      const demo = createDemoCartLine(product, quantity, selection);
+      if (!demo) return "This demo selection or quantity is unavailable.";
+      const existing = cart.find((line) => line.key === demo.key);
+      if (!existing && cart.length >= 48)
+        return "Your bag can contain up to 48 different options.";
+      if (
+        existing &&
+        !canUpdateCartLine(existing, existing.quantity + quantity)
+      )
+        return "The requested demo quantity is unavailable.";
+      registerProducts([product]);
+      setCart((current) => {
+        const old = current.find((line) => line.key === demo.key);
+        if (old)
+          return canUpdateCartLine(old, old.quantity + quantity)
+            ? current.map((line) =>
+                line.key === demo.key
+                  ? { ...demo, quantity: old.quantity + quantity }
+                  : line,
+              )
+            : current;
+        return current.length < 48 ? [...current, demo] : current;
+      });
+      setCartError("");
+      setCartOpen(true);
+      return null;
+    }
     if (!canAddVariant(product, variant, quantity) || !variant)
       return "Verified size, color, price and stock are required before adding this piece.";
     const key = `${product.backendProductId}:${variant.backendVariantId}`;
     const existing = cart.find((line) => line.key === key);
-    if (!existing && cart.length >= 48) return "Your bag can contain up to 48 different options.";
+    if (!existing && cart.length >= 48)
+      return "Your bag can contain up to 48 different options.";
     if ((existing?.quantity || 0) + quantity > variant.availableStock!)
       return "The requested quantity is unavailable.";
     registerProducts([product]);
@@ -220,6 +291,7 @@ export function StoreProvider({
             ...current,
             {
               key,
+              isDemo: false,
               productId: product.id,
               productSlug: product.slug,
               backendProductId: product.backendProductId,
@@ -245,7 +317,11 @@ export function StoreProvider({
         const variant = line.product.variants.find(
           (v) => v.backendVariantId === line.backendVariantId,
         );
-        return canAddVariant(line.product, variant, quantity)
+        return (
+          line.isDemo
+            ? canUpdateCartLine(line, quantity)
+            : canAddVariant(line.product, variant, quantity)
+        )
           ? [{ ...line, quantity }]
           : [line];
       }),
@@ -265,12 +341,7 @@ export function StoreProvider({
   const cartSubtotal = useMemo(
     () =>
       cart.reduce(
-        (sum, line) =>
-          sum +
-          (line.product.variants.find(
-            (v) => v.backendVariantId === line.backendVariantId,
-          )?.price || 0) *
-            line.quantity,
+        (sum, line) => sum + (cartLineUnitPrice(line) || 0) * line.quantity,
         0,
       ),
     [cart],
@@ -294,6 +365,9 @@ export function StoreProvider({
         catalogue: initialCatalogue,
         cartError,
         checkoutReady: false,
+        cartHydrated: hydrated,
+        clearDemoCart: () =>
+          setCart((current) => current.filter((line) => !line.isDemo)),
       }}
     >
       {children}

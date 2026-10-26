@@ -44,7 +44,7 @@ export function ProductGallery({
           images.map((image, index) => (
             <button
               type="button"
-              className={`gallery-image-button relative block w-[100%] min-w-[0] p-[0] overflow-hidden cursor-zoom-in [&:focus-visible_.gallery-zoom-icon]:opacity-[1] [&:focus-visible_.gallery-zoom-icon]:[transform:none] [@media(hover:_hover)]:[&:hover_>_img]:[transform:scale(1.3)] [@media(hover:_hover)]:[&:hover_.gallery-zoom-icon]:opacity-[1] [@media(hover:_hover)]:[&:hover_.gallery-zoom-icon]:[transform:none] ${index === 0 ? "product-gallery-primary [background:#e5e4e0]" : "product-gallery-secondary [background:#e5e4e0]"}`}
+              className={`gallery-image-button relative block w-[100%] min-w-[0] p-[0] overflow-hidden cursor-zoom-in [&:focus-visible_.gallery-zoom-icon]:opacity-[1] [&:focus-visible_.gallery-zoom-icon]:[transform:none] [@media(hover:_hover)]:[&:hover_>_img]:[transform:scale(1.3)] [@media(hover:_hover)]:[&:hover_.gallery-zoom-icon]:opacity-[1] [@media(hover:_hover)]:[&:hover_.gallery-zoom-icon]:[transform:none] ${index === 0 ? "product-gallery-primary col-span-2 [background:#e5e4e0]" : "product-gallery-secondary [background:#e5e4e0]"}`}
               key={image}
               aria-label={`Enlarge ${name}, image ${index + 1}`}
               aria-haspopup="dialog"

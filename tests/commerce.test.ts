@@ -1,6 +1,12 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
+  createDemoCartLine,
+  cartLineUnitPrice,
+  canUpdateCartLine,
+} from "../lib/commerce-cart";
+import { localProducts } from "../lib/commerce-local";
+import {
   adaptBackendProduct,
   availableFromStockLevels,
   canAddVariant,
@@ -25,6 +31,36 @@ const api: CommerceConfig = {
   timeoutMs: 1000,
   checkoutEnabled: false,
 };
+
+test("local demo bag supports pending or candidate sizes without inventing backend variants", () => {
+  const product = localProducts.find(
+    (p) => p.slug === "beige-nuvola-jacket-made-in-italy",
+  )!;
+  const line = createDemoCartLine(product, 2)!;
+  assert.equal(line.isDemo, true);
+  assert.equal(line.backendVariantId, null);
+  assert.equal(line.backendProductId, null);
+  assert.equal(line.size, "Size to confirm");
+  assert.equal(cartLineUnitPrice(line), product.price);
+  assert.equal(canUpdateCartLine(line, 3), true);
+  assert.equal(canUpdateCartLine(line, product.demoStock! + 1), false);
+  assert.equal(
+    createDemoCartLine(product, 1, { size: "unverified-invalid-size" }),
+    null,
+  );
+  assert.equal(
+    createDemoCartLine(product, 1, { size: product.candidateSizes[0] })?.size,
+    product.candidateSizes[0],
+  );
+  assert.equal(createDemoCartLine({ ...product, price: null }, 1), null);
+  assert.equal(
+    createDemoCartLine(adaptBackendProduct(fixtureProduct), 1),
+    null,
+  );
+  assert.equal(canAddVariant(product, undefined, 1), false);
+  assert.deepEqual(product.variants, []);
+  assert.deepEqual(product.sizes, []);
+});
 
 test("schema-compatible adaptation separates ids, prices and authoritative warehouse inventory", () => {
   const p = adaptBackendProduct(fixtureProduct);

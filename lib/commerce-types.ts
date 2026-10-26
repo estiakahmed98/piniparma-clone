@@ -150,6 +150,7 @@ export type BackendProductPage = {
   filters: FilterOptions;
 };
 export type CartLine = {
+  isDemo: boolean;
   key: string;
   productId: string;
   productSlug: string;

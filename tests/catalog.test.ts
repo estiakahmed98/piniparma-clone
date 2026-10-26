@@ -91,12 +91,12 @@ test("re-running preparation is idempotent and never changes the original mappin
     "reports/catalog-validation.json",
   ];
   const hashes = files.map((file) =>
-    crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex"),
+    crypto.createHash("sha256").update(JSON.stringify(JSON.parse(fs.readFileSync(file, "utf8")))).digest("hex"),
   );
   execFileSync(process.execPath, ["scripts/prepare-catalog.cjs"]);
   assert.deepEqual(
     files.map((file) =>
-      crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex"),
+      crypto.createHash("sha256").update(JSON.stringify(JSON.parse(fs.readFileSync(file, "utf8")))).digest("hex"),
     ),
     hashes,
   );

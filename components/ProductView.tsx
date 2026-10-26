@@ -8,6 +8,7 @@ import { useStore } from "./StoreProvider";
 import { ProductCard } from "./ProductCard";
 import { Icon } from "./Icons";
 import { ProductGallery } from "./ProductGallery";
+import { canAddDemoProduct } from "@/lib/commerce-cart";
 import { selectVariant, canAddVariant } from "@/lib/commerce-adapter";
 
 export function ProductView({
@@ -22,15 +23,21 @@ export function ProductView({
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState("");
   const [openDetail, setOpenDetail] = useState("Details & care");
-  const { addToCart, favorites, toggleFavorite, registerProducts } = useStore();
+  const { addToCart, favorites, toggleFavorite, registerProducts, cartHydrated } = useStore();
   useEffect(() => {
     registerProducts([product, ...recommended]);
   }, [product, recommended, registerProducts]);
   const selectedVariant = selectVariant(product, size, color);
   const displayedPrice = selectedVariant?.price ?? product.price;
-  const canAdd = canAddVariant(product, selectedVariant, quantity);
+  const isDemo = product.dataSource === "local";
+  const displaySizes = isDemo ? product.candidateSizes : product.sizes;
+  const canAdd = isDemo
+    ? canAddDemoProduct(product, quantity, { size, color })
+    : canAddVariant(product, selectedVariant, quantity);
   const add = () => {
-    setError(addToCart(product, selectedVariant, quantity) || "");
+    setError(
+      addToCart(product, selectedVariant, quantity, { size, color }) || "",
+    );
   };
   return (
     <>
@@ -86,17 +93,18 @@ export function ProductView({
           )}
           {!product.sizes.length && !product.variants.length && (
             <p className="catalog-notice p-[14px] [background:#f4f1eb] [font-size:13px]">
-              Size and availability will be confirmed soon.
+              Demo sizing preview. Final size and availability require
+              confirmation.
             </p>
           )}
           <div className="detail-size-heading [&_b]:[font-size:11px] [&_b]:tracking-[0.1em] flex justify-between items-center mb-[14px] [&_button]:[font-size:11px] [&_button]:[text-decoration:underline]">
-            <b>SELECT SIZE</b>
+            <b>{isDemo ? "SIZE (DEMO PREVIEW)" : "SELECT SIZE"}</b>
             <button onClick={() => setError("Size guide coming soon.")}>
               Size guide
             </button>
           </div>
           <div className="detail-sizes grid grid-cols-[repeat(5,_1fr)] gap-[8px] mb-[10px] [&_button]:[border:1px_solid_#dedbd6] [&_button]:p-[13px_5px] [&_button]:[font-size:12px] [&_button.selected-size]:[background:#252525] [&_button.selected-size]:[color:#fff] [&_button.selected-size]:[border-color:#252525]">
-            {product.sizes.map((option) => (
+            {displaySizes.map((option) => (
               <button
                 className={size === option ? "selected-size" : ""}
                 key={option}
@@ -105,6 +113,7 @@ export function ProductView({
                   setError("");
                 }}
                 disabled={
+                  !isDemo &&
                   !product.variants.some(
                     (v) =>
                       v.active &&
@@ -141,18 +150,20 @@ export function ProductView({
             </div>
             <button
               className="dark-button [background:#222321] [color:white] inline-flex items-center justify-center p-[16px_21px] [font-size:11px] [font-weight:var(--font-weight-bold,_700)] tracking-[0.09em] text-center [border:1px_solid_#222321] [transition:background_0.2s] [&:hover]:[background:#484b48] add-bag [&:disabled]:opacity-[0.55] [&:disabled]:cursor-not-allowed"
-              disabled={!canAdd}
+              disabled={!canAdd || !cartHydrated}
               onClick={add}
             >
               {displayedPrice === null
                 ? "PRICE ON REQUEST"
-                : !product.mappingVerified || !product.variants.length
-                  ? "AVAILABILITY COMING SOON"
-                  : !selectedVariant
-                    ? "SELECT SIZE & COLOR"
-                    : !canAdd
-                      ? "CURRENTLY UNAVAILABLE"
-                      : `ADD TO BAG - ${formatPrice((displayedPrice ?? 0) * quantity)}`}
+                : isDemo
+                  ? `ADD TO BAG - ${formatPrice((displayedPrice ?? 0) * quantity)}`
+                  : !product.mappingVerified || !product.variants.length
+                    ? "AVAILABILITY COMING SOON"
+                    : !selectedVariant
+                      ? "SELECT SIZE & COLOR"
+                      : !canAdd
+                        ? "CURRENTLY UNAVAILABLE"
+                        : `ADD TO BAG - ${formatPrice((displayedPrice ?? 0) * quantity)}`}
             </button>
             <button
               className="detail-save [border:1px_solid_#ccc] p-[0_16px] max-[520.01px]:p-[0_9px]"

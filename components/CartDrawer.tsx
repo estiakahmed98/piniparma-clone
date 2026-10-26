@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { cartLineUnitPrice } from "@/lib/commerce-cart";
 import { formatPrice } from "@/lib/products";
 import { Icon } from "./Icons";
 import { useStore } from "./StoreProvider";
@@ -98,14 +99,11 @@ export function CartDrawer() {
                         {product.name}
                       </Link>
                       <span>
-                        Size: {item.size} · {product.color}
+                        Size: {item.size} · {item.color}
                       </span>
                       <span>
-                        {formatPrice(
-                          product.variants.find(
-                            (v) => v.backendVariantId === item.backendVariantId,
-                          )?.price ?? null,
-                        )}
+                        {formatPrice(cartLineUnitPrice(item))}
+                        {item.isDemo && <small className="ml-2">DEMO</small>}
                       </span>
                       <div className="qty-controls flex items-center [border:1px_solid_#ddd] h-[31px] mt-[3px] [&_button]:w-[29px] [&_button]:h-[28px] [&_button]:grid [&_button]:[place-items:center] [&_strong]:[font-weight:var(--font-weight-medium,_500)] [&_strong]:p-[0_7px]">
                         <button
@@ -150,7 +148,7 @@ export function CartDrawer() {
                   router.push("/checkout");
                 }}
               >
-                CHECKOUT — DEMO ONLY
+                PROCEED TO CHECKOUT
               </button>
               <button
                 className="secondary-button text-center block w-[100%] p-[16px]"

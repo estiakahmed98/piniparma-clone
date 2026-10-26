@@ -1,6 +1,77 @@
 import { test, expect } from "@playwright/test";
 import catalog from "../../public/boed_static_public/products.json";
 
+test("local product can complete the demo bag, delivery and review flow without sending an order", async ({
+  page,
+}) => {
+  const mutations: string[] = [];
+  page.on("request", (request) => {
+    if (
+      request.method() === "POST" &&
+      /checkout|orders/.test(new URL(request.url()).pathname)
+    )
+      mutations.push(request.url());
+  });
+  const product = catalog.products.find(
+    (p) => p.slug === "beige-nuvola-jacket-made-in-italy",
+  )!;
+  await page.goto(`/products/${product.slug}`, { waitUntil: "networkidle" });
+  await expect(page.locator(".add-bag")).toBeEnabled();
+  await page
+    .locator(".detail-sizes")
+    .getByRole("button", { name: "48", exact: true })
+    .click();
+  await page.locator(".add-bag").click();
+  await expect(
+    page.getByRole("dialog", { name: "Shopping bag" }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Increase quantity", exact: true })
+    .click();
+  await expect(page.locator(".qty-controls strong")).toHaveText("2");
+  await page.reload({ waitUntil: "networkidle" });
+  await expect(page.locator(".cart-count")).toHaveText("2");
+  await page.locator(".cart-button").click();
+  await expect(page.locator(".drawer-item-info")).toContainText("48");
+  await page
+    .getByRole("button", { name: "PROCEED TO CHECKOUT", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Delivery details" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "REVIEW CHECKOUT" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Delivery details" }),
+  ).toBeVisible();
+  await page.getByLabel("Full name *", { exact: true }).fill("Demo Customer");
+  await page.getByLabel("Phone number *", { exact: true }).fill("01700000000");
+  await page
+    .getByLabel("Street address *", { exact: true })
+    .fill("Demo Road 1, House 2");
+  await page.getByLabel("District / City *", { exact: true }).fill("Dhaka");
+  await page.getByRole("button", { name: "REVIEW CHECKOUT" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Review your details" }),
+  ).toBeVisible();
+  await expect(page.locator("aside dl")).toContainText(
+    (product.price * 2 + 80).toLocaleString("en-BD"),
+  );
+  await page.getByRole("button", { name: "Edit delivery details" }).click();
+  await expect(page.getByLabel("Full name *", { exact: true })).toHaveValue(
+    "Demo Customer",
+  );
+  await page.getByRole("button", { name: "REVIEW CHECKOUT" }).click();
+  await page.getByRole("button", { name: "COMPLETE DEMO CHECKOUT" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Demo checkout complete" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Your checkout preview is complete.", { exact: false }),
+  ).toContainText("No real order has been placed");
+  await expect(page.locator(".cart-count")).toHaveText("0");
+  expect(mutations).toEqual([]);
+});
+
 test("homepage media, navigation and responsive geometry retain their design", async ({
   page,
 }, testInfo) => {
@@ -106,7 +177,7 @@ test("server filtering, pagination, search and every product detail remain acces
   await expect(page.locator(".product-detail")).toContainText(
     "Demo price estimate",
   );
-  await expect(page.locator(".add-bag")).toBeDisabled();
+  await expect(page.locator(".add-bag")).toBeEnabled();
   await page.goto(
     "/products/beige-and-light-grey-fancy-pocket-square-made-in-italy",
     { waitUntil: "domcontentloaded" },
