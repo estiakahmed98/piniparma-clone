@@ -13,7 +13,7 @@ const categoryTiles = [
     href: "/collections/suits",
     image: homeImages.suits,
     className:
-      "mosaic-wide [&]:[grid-column:span_8] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&:first-child]:[grid-column:span_2] max-[700.01px]:[&:first-child]:[height:480px] max-[700.01px]:[&:last-child]:[grid-column:span_2] max-[700.01px]:[&:last-child]:[height:480px]",
+      "mosaic-wide [&]:[grid-column:span_8] max-[700.01px]:[&]:[grid-column:span_3] max-[700.01px]:[&]:[height:350px]",
   },
   {
     title: "Small details.",
@@ -21,7 +21,7 @@ const categoryTiles = [
     href: "/collections/accessories",
     image: homeImages.accessories,
     className:
-      "mosaic-narrow [&]:[grid-column:span_4] [&_.mosaic-caption]:[left:18px] [&_.mosaic-caption]:[right:12px] [&_.mosaic-caption_h3]:[font-size:clamp(24px,_2vw,_36px)] [&_.mosaic-caption_>_span:first-child]:[font-size:8px] [&_.mosaic-caption_>_span:first-child]:[letter-spacing:0.07em] max-[1000.01px]:[&_.mosaic-caption_h3]:[font-size:25px] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&_.mosaic-caption]:[left:17px] max-[700.01px]:[&_.mosaic-caption]:[bottom:23px] max-[700.01px]:[&_.mosaic-caption_h3]:[font-size:30px]",
+      "mosaic-narrow [&]:[grid-column:span_4] [&_.mosaic-caption]:[left:18px] [&_.mosaic-caption]:[right:12px] [&_.mosaic-caption_h3]:[font-size:clamp(24px,_2vw,_36px)] [&_.mosaic-caption_>_span:first-child]:[font-size:8px] [&_.mosaic-caption_>_span:first-child]:[letter-spacing:0.07em] max-[1000.01px]:[&_.mosaic-caption_h3]:[font-size:25px] max-[700.01px]:[&]:[grid-column:span_3] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&_.mosaic-caption]:[left:17px] max-[700.01px]:[&_.mosaic-caption]:[bottom:23px] max-[700.01px]:[&_.mosaic-caption_h3]:[font-size:30px]",
   },
   {
     title: "A lighter layer.",
@@ -29,7 +29,7 @@ const categoryTiles = [
     href: "/collections/jackets",
     image: homeImages.jackets,
     className:
-      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&:nth-child(5)]:[grid-column:span_2] max-[700.01px]:[&:nth-child(5)]:[height:480px]",
+      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_2] max-[700.01px]:[&]:[height:clamp(260px,_72vw,_420px)] max-[700.01px]:[&_.mosaic-caption]:left-[10px] max-[700.01px]:[&_.mosaic-caption]:right-[8px] max-[700.01px]:[&_.mosaic-caption]:bottom-[18px] max-[700.01px]:[&_.mosaic-caption_h3]:text-[clamp(17px,4.8vw,27px)] max-[700.01px]:[&_.mosaic-caption_h3]:leading-[1.1] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:text-[7px] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:tracking-[0.08em] max-[700.01px]:[&_.mosaic-cta]:gap-[6px] max-[700.01px]:[&_.mosaic-cta]:text-[7px]",
   },
   {
     title: "Everyday refinement.",
@@ -37,7 +37,7 @@ const categoryTiles = [
     href: "/collections/shirts",
     image: homeImages.shirts,
     className:
-      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&:nth-child(5)]:[grid-column:span_2] max-[700.01px]:[&:nth-child(5)]:[height:480px]",
+      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_2] max-[700.01px]:[&]:[height:clamp(260px,_72vw,_420px)] max-[700.01px]:[&_.mosaic-caption]:left-[10px] max-[700.01px]:[&_.mosaic-caption]:right-[8px] max-[700.01px]:[&_.mosaic-caption]:bottom-[18px] max-[700.01px]:[&_.mosaic-caption_h3]:text-[clamp(17px,4.8vw,27px)] max-[700.01px]:[&_.mosaic-caption_h3]:leading-[1.1] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:text-[7px] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:tracking-[0.08em] max-[700.01px]:[&_.mosaic-cta]:gap-[6px] max-[700.01px]:[&_.mosaic-cta]:text-[7px]",
   },
   {
     title: "Soft by nature.",
@@ -45,7 +45,7 @@ const categoryTiles = [
     href: "/collections/knitwear",
     image: homeImages.knitwear,
     className:
-      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px] max-[700.01px]:[&:nth-child(5)]:[grid-column:span_2] max-[700.01px]:[&:nth-child(5)]:[height:480px]",
+      "mosaic-third [&]:[grid-column:span_4] [&]:[height:clamp(420px,_46vw,_800px)] max-[700.01px]:[&]:[grid-column:span_2] max-[700.01px]:[&]:[height:clamp(260px,_72vw,_420px)] max-[700.01px]:[&_.mosaic-caption]:left-[10px] max-[700.01px]:[&_.mosaic-caption]:right-[8px] max-[700.01px]:[&_.mosaic-caption]:bottom-[18px] max-[700.01px]:[&_.mosaic-caption_h3]:text-[clamp(17px,4.8vw,27px)] max-[700.01px]:[&_.mosaic-caption_h3]:leading-[1.1] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:text-[7px] max-[700.01px]:[&_.mosaic-caption_>_span:first-child]:tracking-[0.08em] max-[700.01px]:[&_.mosaic-cta]:gap-[6px] max-[700.01px]:[&_.mosaic-cta]:text-[7px]",
   },
   {
     title: "The finishing touch.",
@@ -53,7 +53,7 @@ const categoryTiles = [
     href: "/collections/shoes",
     image: homeImages.shoes,
     className:
-      "mosaic-half [&]:[grid-column:span_6] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px]",
+      "mosaic-half [&]:[grid-column:span_6] max-[700.01px]:[&]:[grid-column:span_3] max-[700.01px]:[&]:[height:350px]",
   },
   {
     title: "Room to move.",
@@ -61,7 +61,7 @@ const categoryTiles = [
     href: "/collections/trousers",
     image: homeImages.trousers,
     className:
-      "mosaic-half [&]:[grid-column:span_6] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px]",
+      "mosaic-half [&]:[grid-column:span_6] max-[700.01px]:[&]:[grid-column:span_3] max-[700.01px]:[&]:[height:350px]",
   },
 ];
 const mediaWordmarkStyles = [
@@ -92,14 +92,20 @@ export default async function Home() {
         className="campaign-hero h-[100svh] min-h-[680px] relative mt-[-91px] [background:#65685e] [color:white] isolate max-[700.01px]:mt-[-90px] max-[700.01px]:min-h-[640px] max-[700.01px]:max-h-[950px]"
         aria-labelledby="campaign-title"
       >
-        <img
-          className="campaign-image absolute inset-[0] w-[100%] h-[100%] object-cover object-[50%_0%] z-[-3] min-[1600px]:object-[50%_0%] max-[700.01px]:object-[52%_20%]"
-          src={homeImages.hero}
-          alt="Italian tailoring, photographed in natural light"
-          fetchPriority="high"
-        />
+        <picture className="contents">
+          <source
+            media="(max-width: 700px)"
+            srcSet={encodeURI(homeImages.heroMobile)}
+          />
+          <img
+            className="campaign-image absolute inset-[0] w-[100%] h-[100%] object-cover object-[50%_0%] z-[-3] min-[1600px]:object-[50%_0%] max-[700.01px]:object-[50%_0%]"
+            src={homeImages.hero}
+            alt="Italian tailoring, photographed in natural light"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="campaign-shade absolute inset-[0] z-[-1] [background:linear-gradient(90deg,_#161d1a66_0%,_#161d1a08_75%),_linear-gradient(0deg,_#111a205c,_transparent_65%)]" />
-        <div className="campaign-copy absolute left-[3%] bottom-[10%] [&_.editorial-kicker]:mb-[28px] [&_h1]:[font-family:var(--sans)] [&_h1]:[font-size:clamp(70px,_7.6vw,_146px)] [&_h1]:[font-weight:var(--font-weight-normal,_400)] [&_h1]:leading-[0.91] [&_h1]:tracking-[-0.065em] [&_h1]:m-[0_0_32px] [&_h1_em]:[font-family:var(--serif)] [&_h1_em]:[font-weight:var(--font-weight-normal,_400)] [&_h1_em]:tracking-[-0.025em] max-[1000.01px]:[&_h1]:[font-size:90px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h1]:[font-size:clamp(65px,_13vw,_92px)] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px] max-[700.01px]:[&_.editorial-kicker]:max-w-[230px] max-[700.01px]:[&_.editorial-kicker]:mb-[20px]">
+        <div className="campaign-copy absolute left-[3%] bottom-[10%] [&_.editorial-kicker]:mb-[28px] [&_h1]:[font-family:var(--sans)] [&_h1]:[font-size:clamp(70px,_7.6vw,_146px)] [&_h1]:[font-weight:var(--font-weight-normal,_400)] [&_h1]:leading-[0.91] [&_h1]:tracking-[-0.065em] [&_h1]:m-[0_0_32px] [&_h1_em]:[font-family:var(--serif)] [&_h1_em]:[font-weight:var(--font-weight-normal,_400)] [&_h1_em]:tracking-[-0.025em] max-[1000.01px]:[&_h1]:[font-size:90px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h1]:[font-size:clamp(54px,_16.7vw,_92px)] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px] max-[700.01px]:[&_.editorial-kicker]:max-w-[230px] max-[700.01px]:[&_.editorial-kicker]:mb-[20px]">
           <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
             A NEW SEASON OF POSSIBILITY
           </span>
@@ -180,7 +186,7 @@ export default async function Home() {
           </h2>
           <p>Timeless pieces. A thousand ways to make them yours.</p>
         </div>
-        <div className="mosaic-grid grid grid-cols-[repeat(12,_minmax(0,_1fr))] gap-[var(--editorial-gap)] max-[700.01px]:grid-cols-[repeat(2,_minmax(0,_1fr))]">
+        <div className="mosaic-grid grid grid-cols-[repeat(12,_minmax(0,_1fr))] gap-[var(--editorial-gap)] max-[700.01px]:grid-cols-[repeat(6,_minmax(0,_1fr))]">
           {categoryTiles.map((tile) => (
             <Link
               data-reveal=""
@@ -253,18 +259,25 @@ export default async function Home() {
       </section>
 
       <section
-        className="summer-campaign h-[85svh] min-h-[600px] max-h-[1100px] [background:#ad9472] relative isolate [color:#fff] [&_>_img]:absolute [&_>_img]:inset-[0] [&_>_img]:w-[100%] [&_>_img]:h-[100%] [&_>_img]:object-cover [&_>_img]:object-[50%_0%] [&_>_img]:z-[-2] max-[700.01px]:min-h-[640px] max-[700.01px]:h-[85svh] max-[700.01px]:max-h-[900px] max-[700.01px]:[&_>_img]:object-[52%_center]"
+        className="summer-campaign h-[85svh] min-h-[600px] max-h-[1100px] [background:#ad9472] relative isolate [color:#fff] max-[700.01px]:min-h-[640px] max-[700.01px]:h-[85svh] max-[700.01px]:max-h-[900px]"
         aria-labelledby="summer-title"
       >
-        <img
-          src={homeImages.summer}
-          alt="Relaxed summer dressing in warm natural light"
-          loading="lazy"
-        />
+        <picture className="absolute inset-0 -z-[2] block">
+          <source
+            media="(max-width: 700px)"
+            srcSet={encodeURI(homeImages.summerMobile)}
+          />
+          <img
+            className="h-full w-full object-cover object-top max-[700.01px]:object-center"
+            src={homeImages.summer}
+            alt="Relaxed summer dressing in warm natural light"
+            loading="lazy"
+          />
+        </picture>
         <div className="campaign-shade absolute inset-[0] z-[-1] [background:linear-gradient(90deg,_#161d1a66_0%,_#161d1a08_75%),_linear-gradient(0deg,_#111a205c,_transparent_65%)]" />
         <div
           data-reveal=""
-          className="summer-copy absolute bottom-[12%] left-[4%] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(65px,_7.5vw,_140px)] [&_h2]:leading-[0.92] [&_h2]:tracking-[-0.035em] [&_h2]:m-[20px_0_24px] [&_p]:[font-size:12px] [&_p]:mb-[30px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h2]:[font-size:75px] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px]"
+          className="summer-copy absolute bottom-[12%] left-[4%] [&_h2]:[font-family:var(--serif)] [&_h2]:[font-weight:var(--font-weight-normal,_400)] [&_h2]:[font-size:clamp(65px,_7.5vw,_140px)] [&_h2]:leading-[0.92] [&_h2]:tracking-[-0.035em] [&_h2]:m-[20px_0_24px] [&_p]:[font-size:12px] [&_p]:mb-[30px] max-[700.01px]:left-[6%] max-[700.01px]:bottom-[12%] max-[700.01px]:[&_h2]:[font-size:clamp(52px,_16vw,_75px)] max-[700.01px]:[&_.editorial-kicker]:[font-size:8px]"
         >
           <span className="editorial-kicker block [font-size:10px] [font-weight:var(--font-weight-semibold,_600)] tracking-[0.22em] leading-[1.6]">
             LONG DAYS. LIGHTER LAYERS.

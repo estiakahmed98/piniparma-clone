@@ -77,7 +77,7 @@ test("homepage media, navigation and responsive geometry retain their design", a
 }, testInfo) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await page.goto("/", { waitUntil: "networkidle" });
   await expect(page.locator(".editorial-home")).toHaveCount(1);
   await expect(page.locator(".editorial-home")).toHaveAttribute(
     "data-motion-ready",
@@ -94,12 +94,22 @@ test("homepage media, navigation and responsive geometry retain their design", a
       .evaluate(
         (e) => getComputedStyle(e).gridTemplateColumns.split(" ").length,
       ),
-  ).toBe(mobile ? 2 : 12);
+  ).toBe(mobile ? 6 : 12);
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,
     ),
   ).toBe(true);
+  const heroSource = await page.locator('.campaign-image').evaluate((image: HTMLImageElement) => decodeURI(image.currentSrc));
+  expect(heroSource).toContain(mobile ? 'Coastal Stone Terrace Elegance 2.png' : 'Coastal Stone Terrace Elegance.png');
+  const rows = await page.locator('.mosaic-tile').evaluateAll(tiles => tiles.map(tile => {const box = tile.getBoundingClientRect();return {top:box.top,width:box.width,left:box.left,right:box.right};}));
+  for (const index of [3,4]) {
+    expect(Math.abs(rows[index].top - rows[2].top)).toBeLessThan(1);
+    expect(Math.abs(rows[index].width - rows[2].width)).toBeLessThan(1);
+  }
+  expect(Math.abs(rows[0].top - rows[1].top)).toBeLessThan(1);
+  expect(Math.abs(rows[5].top - rows[6].top)).toBeLessThan(1);
+  if(mobile) expect(rows[2].width).toBeLessThan(page.viewportSize()!.width / 3 + 1);
   await page.locator("[data-story-video]").scrollIntoViewIfNeeded();
   await expect
     .poll(() =>
