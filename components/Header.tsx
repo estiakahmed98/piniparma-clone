@@ -117,6 +117,8 @@ export function Header() {
   const [wishlistError, setWishlistError] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState<MenuName>(null);
+  const [displayedMenu, setDisplayedMenu] =
+    useState<Exclude<MenuName, null>>("Clothing");
   const [searchOpen, setSearchOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -202,7 +204,12 @@ export function Header() {
     return () => controller.abort();
   }, [wishlistOpen, favorites, registerProducts]);
   const savedProducts = products.filter((p) => favorites.includes(p.id));
-  const activeMenu = menu ? menuContent[menu] : null;
+  // Keep the last content mounted so closing and interrupted transitions can finish.
+  const activeMenu = menuContent[displayedMenu];
+  const openMenu = (name: Exclude<MenuName, null>) => {
+    setDisplayedMenu(name);
+    setMenu(name);
+  };
 
   return (
     <>
@@ -243,9 +250,10 @@ export function Header() {
                         : "/collections/accessories"
                   }
                   className={menu === nav ? "nav-active" : ""}
-                  onMouseEnter={() => setMenu(nav)}
-                  onFocus={() => setMenu(nav)}
+                  onMouseEnter={() => openMenu(nav)}
+                  onFocus={() => openMenu(nav)}
                   aria-expanded={menu === nav}
+                  aria-controls="header-mega-menu"
                 >
                   {nav}
                 </Link>
@@ -331,10 +339,12 @@ export function Header() {
             </button>
           </div>
         </header>
-        {activeMenu && (
           <div
+            id="header-mega-menu"
+            data-open={menu !== null}
+            aria-hidden={menu === null}
+            inert={menu === null}
             className="mega-menu absolute top-[57px] left-[0] w-[100%] h-[500px] grid grid-cols-[24.8%_24.8%_25%_25.4%] z-[62] [background:white] [box-shadow:0_8px_20px_#0000000c] max-[1150.01px]:grid-cols-[25%_25%_25%_25%] max-[800.01px]:hidden!"
-            onMouseEnter={() => setMenu(menu)}
           >
             <div className="mega-column p-[20px_20px_26px] [border-right:1px_solid_#e7e7e7] [overflow-y:auto] [&_h3]:[font-size:12px] [&_h3]:tracking-[0.22em] [&_h3]:[font-weight:var(--font-weight-bold,_700)] [&_h3]:[border-bottom:1px_solid_#e7e7e7] [&_h3]:p-[0_0_10px] [&_h3]:m-[0_0_10px] mega-list [&_>_a]:block [&_>_a]:leading-[28px] [&_>_a]:[font-size:13px] [&_>_a]:[font-weight:var(--font-weight-medium,_500)] [&_>_a]:[color:#3c3b3a] [&_>_a:hover]:[color:#ad2826] [&_>_a:hover]:[text-decoration:underline]">
               <h3>{activeMenu.title}</h3>
@@ -390,16 +400,17 @@ export function Header() {
               </div>
             </Link>
           </div>
-        )}
       </div>
-      {menu && (
         <button
+          data-open={menu !== null}
+          aria-hidden={menu === null}
+          inert={menu === null}
+          tabIndex={-1}
           className="mega-shade fixed z-[55] top-[91px] [inset-inline:0] bottom-[0] [background:rgba(0,_0,_0,_0.58)] w-[100%] h-[calc(100dvh_-_91px)] cursor-default max-[800.01px]:hidden!"
           onMouseEnter={() => setMenu(null)}
           onClick={() => setMenu(null)}
           aria-label="Close menu"
         />
-      )}
 
       {searchOpen && (
         <div
