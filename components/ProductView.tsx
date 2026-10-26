@@ -1,31 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Product } from "@/lib/products";
-import { categoryNames, formatPrice, products } from "@/lib/products";
+import { categoryNames, formatPrice } from "@/lib/products";
 import { useStore } from "./StoreProvider";
 import { ProductCard } from "./ProductCard";
 import { Icon } from "./Icons";
 import { ProductGallery } from "./ProductGallery";
+import { selectVariant, canAddVariant } from "@/lib/commerce-adapter";
 
-export function ProductView({ product }: { product: Product }) {
+export function ProductView({
+  product,
+  recommended,
+}: {
+  product: Product;
+  recommended: Product[];
+}) {
   const [size, setSize] = useState("");
+  const [color, setColor] = useState(product.colors[0] || product.color);
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState("");
   const [openDetail, setOpenDetail] = useState("Details & care");
-  const { addToCart, favorites, toggleFavorite } = useStore();
-  const recommended = products
-    .filter((p) => p.category === product.category && p.id !== product.id)
-    .slice(0, 4);
+  const { addToCart, favorites, toggleFavorite, registerProducts } = useStore();
+  useEffect(() => {
+    registerProducts([product, ...recommended]);
+  }, [product, recommended, registerProducts]);
+  const selectedVariant = selectVariant(product, size, color);
+  const displayedPrice = selectedVariant?.price ?? product.price;
+  const canAdd = canAddVariant(product, selectedVariant, quantity);
   const add = () => {
-    if (product.price === null || !product.sizes.length) return;
-    if (!size) {
-      setError("Please select a size.");
-      return;
-    }
-    setError("");
-    addToCart(product.id, size, quantity);
+    setError(addToCart(product, selectedVariant, quantity) || "");
   };
   return (
     <>
@@ -46,15 +51,40 @@ export function ProductView({ product }: { product: Product }) {
           )}
           <h1>{product.name}</h1>
           <p className="detail-price [font-size:18px] mb-[28px]">
-            {formatPrice(product.price)}
+            {formatPrice(displayedPrice)}
           </p>
           <p className="detail-description [font-size:13px] leading-[1.9] [color:#797672] mb-[35px]">
             {product.description}
           </p>
           <p className="detail-color m-[0_0_30px] [font-size:12px] [&_b]:[font-size:11px] [&_b]:tracking-[0.1em]">
-            <b>COLOR:</b> {product.color}
+            <b>COLOR:</b> {color}
+            {product.colors.length > 1 && (
+              <span className="ml-3 inline-flex gap-2">
+                {product.colors.map((option) => (
+                  <button
+                    type="button"
+                    key={option}
+                    aria-pressed={color === option}
+                    className="border border-[#dedbd6] px-2 py-1 aria-pressed:border-[#252525]"
+                    onClick={() => {
+                      setColor(option);
+                      setSize("");
+                      setError("");
+                    }}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </span>
+            )}
           </p>
-          {!product.sizes.length && (
+          {product.requiresPriceVerification && (
+            <p className="catalog-notice p-[14px] bg-[#f4f1eb] text-[13px]">
+              Demo price estimate in BDT - awaiting verification. Not an
+              official supplier or checkout price.
+            </p>
+          )}
+          {!product.sizes.length && !product.variants.length && (
             <p className="catalog-notice p-[14px] [background:#f4f1eb] [font-size:13px]">
               Size and availability will be confirmed soon.
             </p>
@@ -74,6 +104,16 @@ export function ProductView({ product }: { product: Product }) {
                   setSize(option);
                   setError("");
                 }}
+                disabled={
+                  !product.variants.some(
+                    (v) =>
+                      v.active &&
+                      v.size === option &&
+                      (!v.color || v.color === color) &&
+                      v.availableStock !== null &&
+                      v.availableStock > 0,
+                  )
+                }
                 aria-pressed={size === option}
               >
                 {option}
@@ -101,14 +141,18 @@ export function ProductView({ product }: { product: Product }) {
             </div>
             <button
               className="dark-button [background:#222321] [color:white] inline-flex items-center justify-center p-[16px_21px] [font-size:11px] [font-weight:var(--font-weight-bold,_700)] tracking-[0.09em] text-center [border:1px_solid_#222321] [transition:background_0.2s] [&:hover]:[background:#484b48] add-bag [&:disabled]:opacity-[0.55] [&:disabled]:cursor-not-allowed"
-              disabled={product.price === null || !product.sizes.length}
+              disabled={!canAdd}
               onClick={add}
             >
-              {product.price === null
+              {displayedPrice === null
                 ? "PRICE ON REQUEST"
-                : !product.sizes.length
+                : !product.mappingVerified || !product.variants.length
                   ? "AVAILABILITY COMING SOON"
-                  : `ADD TO BAG - ${formatPrice(product.price * quantity)}`}
+                  : !selectedVariant
+                    ? "SELECT SIZE & COLOR"
+                    : !canAdd
+                      ? "CURRENTLY UNAVAILABLE"
+                      : `ADD TO BAG - ${formatPrice((displayedPrice ?? 0) * quantity)}`}
             </button>
             <button
               className="detail-save [border:1px_solid_#ccc] p-[0_16px] max-[520.01px]:p-[0_9px]"

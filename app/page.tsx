@@ -2,7 +2,8 @@ import Link from "next/link";
 import { HomeMotion } from "@/components/HomeMotion";
 import { ProductCard } from "@/components/ProductCard";
 import { Icon } from "@/components/Icons";
-import { products } from "@/lib/products";
+import { getHomepageProducts } from "@/lib/commerce-client";
+import { CommerceState } from "@/components/CommerceState";
 import { homeImages } from "@/lib/home-images";
 
 const categoryTiles = [
@@ -63,20 +64,6 @@ const categoryTiles = [
       "mosaic-half [&]:[grid-column:span_6] max-[700.01px]:[&]:[grid-column:span_1] max-[700.01px]:[&]:[height:350px]",
   },
 ];
-const featuredSlugs = [
-  "beige-nuvola",
-  "light-blue-striped",
-  "blue-cotton-knitted-bomber",
-  "blue-cotton-and-linen-ribbed-polo",
-];
-const featuredProducts = featuredSlugs.map(
-  (slug, index) =>
-    products.find((p) => p.slug.includes(slug)) ||
-    products.filter(
-      (p) =>
-        p.category === ["jackets", "shirts", "knitwear", "knitwear"][index],
-    )[0],
-);
 const mediaWordmarkStyles = [
   "media-wordmark-0 [&]:[font-size:15px] [&]:[font-weight:400] [&]:[letter-spacing:0.07em]",
   "media-wordmark-1 ",
@@ -87,7 +74,18 @@ const mediaWordmarkStyles = [
 ];
 const media = ["NOBLEMAN", "Forbes", "Esquire", "GQ", "THE RAKE", "VOGUE"];
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const home = await getHomepageProducts().catch(() => null);
+  if (!home)
+    return (
+      <CommerceState
+        title="The collection is temporarily unavailable."
+        message="Please try again in a moment."
+      />
+    );
+  const featuredProducts = home.featured;
   return (
     <HomeMotion>
       <section

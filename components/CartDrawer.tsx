@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { products, formatPrice } from "@/lib/products";
+import { formatPrice } from "@/lib/products";
 import { Icon } from "./Icons";
 import { useStore } from "./StoreProvider";
 
 export function CartDrawer() {
+  const router = useRouter();
   const {
     cart,
     cartOpen,
@@ -14,6 +16,7 @@ export function CartDrawer() {
     updateQuantity,
     removeFromCart,
     cartSubtotal,
+    cartError,
   } = useStore();
   useEffect(() => {
     if (!cartOpen) return;
@@ -48,6 +51,11 @@ export function CartDrawer() {
             <Icon name="close" size={23} />
           </button>
         </div>
+        {cartError && (
+          <p role="alert" className="px-6 text-xs text-[#9e3430]">
+            {cartError}
+          </p>
+        )}
         {cart.length === 0 ? (
           <div className="empty-bag flex flex-col items-center text-center justify-center p-[65px_30px] gap-[10px] [flex:1] [&_h3]:[font-family:var(--serif)] [&_h3]:[font-size:32px] [&_h3]:[font-weight:var(--font-weight-normal,_400)] [&_h3]:m-[8px_0_0] [&_p]:[font-size:13px] [&_p]:[color:var(--muted)] [&_p]:leading-[1.7] [&_p]:mb-[15px]">
             <Icon name="bag" size={36} />
@@ -65,18 +73,22 @@ export function CartDrawer() {
           <>
             <div className="drawer-items p-[22px] [overflow-y:auto] [flex:1]">
               {cart.map((item) => {
-                const product = products.find((p) => p.id === item.productId);
+                const product = item.product;
                 if (!product) return null;
                 return (
                   <div
                     className="drawer-item flex gap-[15px] mb-[25px] [&_>_a_img]:w-[105px] [&_>_a_img]:h-[137px] [&_>_a_img]:object-cover"
-                    key={`${item.productId}-${item.size}`}
+                    key={item.key}
                   >
                     <Link
                       href={`/products/${product.slug}`}
                       onClick={() => setCartOpen(false)}
                     >
-                      <img src={product.image} alt={product.name} />
+                      {product.image ? (
+                        <img src={product.image} alt={product.name} />
+                      ) : (
+                        <span>Image coming soon</span>
+                      )}
                     </Link>
                     <div className="drawer-item-info flex flex-col items-start gap-[10px] [font-size:12px] [flex:1] [&_>_a]:[font-weight:var(--font-weight-semibold,_600)] [&_>_a]:leading-[1.5] [&_>_span]:[color:#817d79]">
                       <Link
@@ -88,16 +100,18 @@ export function CartDrawer() {
                       <span>
                         Size: {item.size} · {product.color}
                       </span>
-                      <span>{formatPrice(product.price)}</span>
+                      <span>
+                        {formatPrice(
+                          product.variants.find(
+                            (v) => v.backendVariantId === item.backendVariantId,
+                          )?.price ?? null,
+                        )}
+                      </span>
                       <div className="qty-controls flex items-center [border:1px_solid_#ddd] h-[31px] mt-[3px] [&_button]:w-[29px] [&_button]:h-[28px] [&_button]:grid [&_button]:[place-items:center] [&_strong]:[font-weight:var(--font-weight-medium,_500)] [&_strong]:p-[0_7px]">
                         <button
                           aria-label="Decrease quantity"
                           onClick={() =>
-                            updateQuantity(
-                              item.productId,
-                              item.size,
-                              item.quantity - 1,
-                            )
+                            updateQuantity(item.key, item.quantity - 1)
                           }
                         >
                           <Icon name="minus" size={14} />
@@ -106,11 +120,7 @@ export function CartDrawer() {
                         <button
                           aria-label="Increase quantity"
                           onClick={() =>
-                            updateQuantity(
-                              item.productId,
-                              item.size,
-                              item.quantity + 1,
-                            )
+                            updateQuantity(item.key, item.quantity + 1)
                           }
                         >
                           <Icon name="plus" size={14} />
@@ -118,9 +128,7 @@ export function CartDrawer() {
                       </div>
                       <button
                         className="remove-item [text-decoration:underline] [color:#888] [font-size:11px]"
-                        onClick={() =>
-                          removeFromCart(item.productId, item.size)
-                        }
+                        onClick={() => removeFromCart(item.key)}
                       >
                         Remove
                       </button>
@@ -137,11 +145,10 @@ export function CartDrawer() {
               <p>Shipping calculated at checkout. This is a showcase demo.</p>
               <button
                 className="dark-button [background:#222321] [color:white] inline-flex items-center justify-center p-[16px_21px] [font-size:11px] [font-weight:var(--font-weight-bold,_700)] tracking-[0.09em] text-center [border:1px_solid_#222321] [transition:background_0.2s] [&:hover]:[background:#484b48]"
-                onClick={() =>
-                  alert(
-                    "Demo only — checkout is not connected to a payment gateway or database.",
-                  )
-                }
+                onClick={() => {
+                  setCartOpen(false);
+                  router.push("/checkout");
+                }}
               >
                 CHECKOUT — DEMO ONLY
               </button>

@@ -1,3 +1,4 @@
+import { getCommerceShell } from "@/lib/commerce-shell";
 import type { Metadata } from "next";
 import "./tailwind.css";
 import { StoreProvider } from "@/components/StoreProvider";
@@ -17,9 +18,10 @@ export const metadata: Metadata = {
     "An elegant showcase storefront for Aura BOED: modern tailoring, contemporary essentials, and considered style.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const commerceShell = await getCommerceShell();
   // Browser extensions can add attributes to <html> before React hydrates.
   // Keep suppression at this element so mismatches inside the app stay visible.
   return (
@@ -35,7 +37,7 @@ export default function RootLayout({
         />
       </head>
       <body className="m-[0] [background:white] [color:var(--ink)] [font-family:var(--sans)] [font-size:13px] [-webkit-font-smoothing:antialiased]">
-        <StoreProvider>
+        <StoreProvider initialCatalogue={commerceShell}>
           <Storefront>{children}</Storefront>
           <BackToTop />
         </StoreProvider>

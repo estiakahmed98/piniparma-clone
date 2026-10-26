@@ -1,74 +1,5 @@
-export type Collection =
-  | "suits"
-  | "jackets"
-  | "shirts"
-  | "trousers"
-  | "knitwear"
-  | "shoes"
-  | "accessories";
-export type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  category: Collection;
-  price: number | null;
-  compareAt?: number;
-  color: string;
-  sizes: string[];
-  season: string;
-  images: string[];
-  sourceCategory: string;
-  needsReview: boolean;
-  image: string;
-  description: string;
-  featured?: boolean;
-  badge?: string;
-};
-
-import catalog from "@/public/boed_static_public/products.json";
-
-function collectionFor(category: string): Collection {
-  if (/Shoes/.test(category)) return "shoes";
-  if (/Trousers|Swimwear/.test(category)) return "trousers";
-  if (/Knitwear|Homewear/.test(category)) return "knitwear";
-  if (/Shirts/.test(category)) return "shirts";
-  if (/Jackets|Outerwear|Waistcoats/.test(category)) return "jackets";
-  if (/Suits|Tuxedos/.test(category)) return "suits";
-  return "accessories";
-}
-const localMedia = (path: string) => (path ? `/boed_static_public${path}` : "");
-export const products: Product[] = catalog.products
-  .filter(
-    (item) =>
-      Boolean(item.image?.trim()) && item.images.some((image) => image.trim()),
-  )
-  .map((item, index) => ({
-    id: item.id,
-    slug: item.slug,
-    name: item.name,
-    category: collectionFor(item.category),
-    sourceCategory: item.category,
-    price: item.price,
-    color:
-      item.name.match(
-        /\b(Beige|Grey|Navy|Brown|Black|Blue|Cream|Olive|White|Green|Burgundy|Almond)\b/i,
-      )?.[0] || "Not specified",
-    sizes: item.sizes,
-    season: "Not specified",
-    image: localMedia(item.image || ""),
-    images: item.images.map(localMedia),
-    needsReview: item.needsReview,
-    description: item.description || "",
-    featured: index < 8,
-  }));
-export function collectionImage(category: Collection) {
-  return products.find((p) => p.category === category && p.image)?.image || "";
-}
-
-export type CollectionPage = Collection | "summer";
-export const summerProducts = products.filter((p) =>
-  /linen|cotton|swim|summer/i.test(p.name),
-);
+export type { Product, Collection, CollectionPage } from "./commerce-types";
+import type { CollectionPage } from "./commerce-types";
 
 export const subcollections = [
   { label: "Business Suits", tag: "All Season" },
@@ -110,8 +41,4 @@ export const categoryDescription: Record<CollectionPage, string> = {
 
 export function formatPrice(n: number | null) {
   return n === null ? "Price on request" : `BDT ${n.toLocaleString("en-BD")}`;
-}
-
-export function productBySlug(slug: string) {
-  return products.find((p) => p.slug === slug);
 }

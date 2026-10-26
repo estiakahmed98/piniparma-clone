@@ -5,3 +5,8 @@ out/
 *.tsbuildinfo
 .env*
 .DS_Store
+
+!.env.example
+
+test-results/
+playwright-report/

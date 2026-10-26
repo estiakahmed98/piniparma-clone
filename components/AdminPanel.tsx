@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { products, categoryNames, type Collection } from "@/lib/products";
+import { categoryNames, type Product, type Collection } from "@/lib/products";
 import { Icon, type IconName } from "./Icons";
 type AdminItem = { label: string; icon: IconName };
 type AdminGroup = { label: string; description: string; items: AdminItem[] };
@@ -91,7 +91,7 @@ const navigationGroups: AdminGroup[] = [
   },
 ];
 const navigation = navigationGroups.flatMap((group) => group.items);
-export function AdminPanel() {
+export function AdminPanel({ products }: { products: Product[] }) {
   const [active, setActive] = useState("Dashboard");
   const [query, setQuery] = useState("");
   const [menuSearch, setMenuSearch] = useState("");

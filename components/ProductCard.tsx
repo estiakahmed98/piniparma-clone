@@ -69,6 +69,14 @@ export function ProductCard({ product }: { product: Product }) {
         </Link>
         <div className="product-price [font-size:13px] mt-[7px] [&_del]:ml-[10px] [&_del]:[color:var(--muted)] max-[520.01px]:[font-size:12px]">
           {formatPrice(product.price)}
+          {product.requiresPriceVerification && (
+            <span
+              className="ml-2 text-[8px] text-[var(--muted)]"
+              title="Demo estimate; not an official supplier or checkout price"
+            >
+              DEMO
+            </span>
+          )}
           {product.compareAt && <del>{formatPrice(product.compareAt)}</del>}
         </div>
         <span className="product-color block [font-size:11px] [color:#969390] mt-[5px] max-[520.01px]:[font-size:10px]">

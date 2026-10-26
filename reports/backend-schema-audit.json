@@ -1,0 +1,1214 @@
+{
+  "repository": "https://github.com/zisan-2000/general_ecommerce",
+  "referenceCommit": "6cbda049631a04f99caa71196f6125857b4dcf1b",
+  "schemaSha256": "1445ff0b94846468f482e5a60b31ce26b2f2b972cbf97f3dc5a7c0e78c3bc718",
+  "pastedSchemaSha256": "1445ff0b94846468f482e5a60b31ce26b2f2b972cbf97f3dc5a7c0e78c3bc718",
+  "models": [
+    {
+      "name": "Product",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "slug",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "ProductType"
+        },
+        {
+          "name": "sku",
+          "type": "String?"
+        },
+        {
+          "name": "categoryId",
+          "type": "Int"
+        },
+        {
+          "name": "brandId",
+          "type": "Int?"
+        },
+        {
+          "name": "writerId",
+          "type": "Int?"
+        },
+        {
+          "name": "publisherId",
+          "type": "Int?"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        },
+        {
+          "name": "shortDesc",
+          "type": "String?"
+        },
+        {
+          "name": "model",
+          "type": "String?"
+        },
+        {
+          "name": "warranty",
+          "type": "String?"
+        },
+        {
+          "name": "basePrice",
+          "type": "Decimal"
+        },
+        {
+          "name": "originalPrice",
+          "type": "Decimal?"
+        },
+        {
+          "name": "flashSaleEnabled",
+          "type": "Boolean"
+        },
+        {
+          "name": "flashSalePrice",
+          "type": "Decimal?"
+        },
+        {
+          "name": "flashSaleStartsAt",
+          "type": "DateTime?"
+        },
+        {
+          "name": "flashSaleEndsAt",
+          "type": "DateTime?"
+        },
+        {
+          "name": "flashSaleSortOrder",
+          "type": "Int"
+        },
+        {
+          "name": "cartReminderMinutes",
+          "type": "Int?"
+        },
+        {
+          "name": "currency",
+          "type": "String"
+        },
+        {
+          "name": "weight",
+          "type": "Float?"
+        },
+        {
+          "name": "dimensions",
+          "type": "Json?"
+        },
+        {
+          "name": "VatClassId",
+          "type": "Int?"
+        },
+        {
+          "name": "digitalAssetId",
+          "type": "Int?"
+        },
+        {
+          "name": "serviceDurationMinutes",
+          "type": "Int?"
+        },
+        {
+          "name": "serviceLocation",
+          "type": "String?"
+        },
+        {
+          "name": "serviceOnlineLink",
+          "type": "String?"
+        },
+        {
+          "name": "available",
+          "type": "Boolean"
+        },
+        {
+          "name": "featured",
+          "type": "Boolean"
+        },
+        {
+          "name": "bestSelling",
+          "type": "Boolean"
+        },
+        {
+          "name": "image",
+          "type": "String?"
+        },
+        {
+          "name": "gallery",
+          "type": "String[]"
+        },
+        {
+          "name": "videoUrl",
+          "type": "String?"
+        },
+        {
+          "name": "soldCount",
+          "type": "Int"
+        },
+        {
+          "name": "ratingAvg",
+          "type": "Float"
+        },
+        {
+          "name": "ratingCount",
+          "type": "Int"
+        },
+        {
+          "name": "deleted",
+          "type": "Boolean"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "lowStockThreshold",
+          "type": "Int"
+        },
+        {
+          "name": "inventoryItemClass",
+          "type": "InventoryItemClass"
+        },
+        {
+          "name": "requiresAssetTag",
+          "type": "Boolean"
+        },
+        {
+          "name": "bundleStockLimit",
+          "type": "Int?"
+        },
+        {
+          "name": "bundleWarehouseId",
+          "type": "Int?"
+        },
+        {
+          "name": "bundleFulfillmentMode",
+          "type": "BundleFulfillmentMode"
+        },
+        {
+          "name": "cartItems",
+          "type": "CartItem[]"
+        },
+        {
+          "name": "dailySnapshots",
+          "type": "InventoryDailySnapshot[]"
+        },
+        {
+          "name": "inventoryLogs",
+          "type": "InventoryLog[]"
+        },
+        {
+          "name": "warehouseDailySnapshots",
+          "type": "InventoryWarehouseDailySnapshot[]"
+        },
+        {
+          "name": "orderItems",
+          "type": "OrderItem[]"
+        },
+        {
+          "name": "VatClass",
+          "type": "VatClass?"
+        },
+        {
+          "name": "brand",
+          "type": "Brand?"
+        },
+        {
+          "name": "category",
+          "type": "Category"
+        },
+        {
+          "name": "writer",
+          "type": "Writer?"
+        },
+        {
+          "name": "publisher",
+          "type": "Publisher?"
+        },
+        {
+          "name": "digitalAsset",
+          "type": "DigitalAsset?"
+        },
+        {
+          "name": "bookMetadata",
+          "type": "BookMetadata?"
+        },
+        {
+          "name": "attributes",
+          "type": "ProductAttribute[]"
+        },
+        {
+          "name": "specificationGroups",
+          "type": "ProductSpecificationGroup[]"
+        },
+        {
+          "name": "codes",
+          "type": "ProductCode[]"
+        },
+        {
+          "name": "variants",
+          "type": "ProductVariant[]"
+        },
+        {
+          "name": "variantOptions",
+          "type": "ProductVariantOption[]"
+        },
+        {
+          "name": "reviews",
+          "type": "Review[]"
+        },
+        {
+          "name": "questions",
+          "type": "ProductQuestion[]"
+        },
+        {
+          "name": "serviceSlots",
+          "type": "ServiceSlot[]"
+        },
+        {
+          "name": "wishlist",
+          "type": "Wishlist[]"
+        },
+        {
+          "name": "priceDropAlerts",
+          "type": "PriceDropAlert[]"
+        },
+        {
+          "name": "customerNotifications",
+          "type": "CustomerNotification[]"
+        },
+        {
+          "name": "bundleItems",
+          "type": "ProductBundleItem[]"
+        },
+        {
+          "name": "includedInBundles",
+          "type": "ProductBundleItem[]"
+        },
+        {
+          "name": "bundleGroups",
+          "type": "BundleGroup[]"
+        },
+        {
+          "name": "bundleGroupOptions",
+          "type": "BundleGroupOption[]"
+        },
+        {
+          "name": "orderBundleComponents",
+          "type": "OrderBundleComponent[]"
+        },
+        {
+          "name": "bundleWarehouse",
+          "type": "Warehouse?"
+        },
+        {
+          "name": "assembledStockLevels",
+          "type": "BundleStockLevel[]"
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "slug",
+          "type": "String"
+        },
+        {
+          "name": "image",
+          "type": "String?"
+        },
+        {
+          "name": "parentId",
+          "type": "Int?"
+        },
+        {
+          "name": "isActive",
+          "type": "Boolean"
+        },
+        {
+          "name": "sortOrder",
+          "type": "Int"
+        },
+        {
+          "name": "showInHeader",
+          "type": "Boolean"
+        },
+        {
+          "name": "showInFooter",
+          "type": "Boolean"
+        },
+        {
+          "name": "featured",
+          "type": "Boolean"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "deleted",
+          "type": "Boolean"
+        },
+        {
+          "name": "parent",
+          "type": "Category?"
+        },
+        {
+          "name": "children",
+          "type": "Category[]"
+        },
+        {
+          "name": "products",
+          "type": "Product[]"
+        },
+        {
+          "name": "categoryAttributes",
+          "type": "CategoryAttribute[]"
+        }
+      ]
+    },
+    {
+      "name": "ProductVariant",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "productId",
+          "type": "Int"
+        },
+        {
+          "name": "sku",
+          "type": "String"
+        },
+        {
+          "name": "price",
+          "type": "Decimal"
+        },
+        {
+          "name": "currency",
+          "type": "String"
+        },
+        {
+          "name": "stock",
+          "type": "Int"
+        },
+        {
+          "name": "digitalAssetId",
+          "type": "Int?"
+        },
+        {
+          "name": "options",
+          "type": "Json"
+        },
+        {
+          "name": "colorImage",
+          "type": "String?"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "isDefault",
+          "type": "Boolean"
+        },
+        {
+          "name": "active",
+          "type": "Boolean"
+        },
+        {
+          "name": "lowStockThreshold",
+          "type": "Int"
+        },
+        {
+          "name": "costPrice",
+          "type": "Decimal?"
+        },
+        {
+          "name": "cartItems",
+          "type": "CartItem[]"
+        },
+        {
+          "name": "bundleGroupOptions",
+          "type": "BundleGroupOption[]"
+        },
+        {
+          "name": "orderBundleComponents",
+          "type": "OrderBundleComponent[]"
+        },
+        {
+          "name": "dailySnapshots",
+          "type": "InventoryDailySnapshot[]"
+        },
+        {
+          "name": "inventoryLogs",
+          "type": "InventoryLog[]"
+        },
+        {
+          "name": "warehouseDailySnapshots",
+          "type": "InventoryWarehouseDailySnapshot[]"
+        },
+        {
+          "name": "orderItems",
+          "type": "OrderItem[]"
+        },
+        {
+          "name": "codes",
+          "type": "ProductCode[]"
+        },
+        {
+          "name": "digitalAsset",
+          "type": "DigitalAsset?"
+        },
+        {
+          "name": "product",
+          "type": "Product"
+        },
+        {
+          "name": "purchaseOrderItems",
+          "type": "PurchaseOrderItem[]"
+        },
+        {
+          "name": "goodsReceiptItems",
+          "type": "GoodsReceiptItem[]"
+        },
+        {
+          "name": "purchaseRequisitionItems",
+          "type": "PurchaseRequisitionItem[]"
+        },
+        {
+          "name": "supplierInvoiceItems",
+          "type": "SupplierInvoiceItem[]"
+        },
+        {
+          "name": "supplierReturnItems",
+          "type": "SupplierReturnItem[]"
+        },
+        {
+          "name": "rfqItems",
+          "type": "RfqItem[]"
+        },
+        {
+          "name": "supplierQuotationItems",
+          "type": "SupplierQuotationItem[]"
+        },
+        {
+          "name": "replenishmentRules",
+          "type": "ReplenishmentRule[]"
+        },
+        {
+          "name": "warehouseTransferItems",
+          "type": "WarehouseTransferItem[]"
+        },
+        {
+          "name": "stockLevels",
+          "type": "StockLevel[]"
+        },
+        {
+          "name": "materialRequestItems",
+          "type": "MaterialRequestItem[]"
+        },
+        {
+          "name": "materialReleaseNoteItems",
+          "type": "MaterialReleaseNoteItem[]"
+        },
+        {
+          "name": "assetRegisters",
+          "type": "AssetRegister[]"
+        },
+        {
+          "name": "stockBinLevels",
+          "type": "StockBinLevel[]"
+        },
+        {
+          "name": "inventoryVerificationLines",
+          "type": "InventoryVerificationLine[]"
+        },
+        {
+          "name": "reorderAlerts",
+          "type": "ReorderAlert[]"
+        },
+        {
+          "name": "investorAllocations",
+          "type": "InvestorProductAllocation[]"
+        },
+        {
+          "name": "investorCapitalTransactions",
+          "type": "InvestorCapitalTransaction[]"
+        },
+        {
+          "name": "investorProfitRunVariants",
+          "type": "InvestorProfitRunVariant[]"
+        },
+        {
+          "name": "investorProfitRunAllocations",
+          "type": "InvestorProfitRunAllocation[]"
+        },
+        {
+          "name": "priceDropAlerts",
+          "type": "PriceDropAlert[]"
+        },
+        {
+          "name": "customerNotifications",
+          "type": "CustomerNotification[]"
+        }
+      ]
+    },
+    {
+      "name": "ProductVariantOption",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "productId",
+          "type": "Int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "position",
+          "type": "Int"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "product",
+          "type": "Product"
+        },
+        {
+          "name": "values",
+          "type": "ProductVariantOptionValue[]"
+        }
+      ]
+    },
+    {
+      "name": "ProductVariantOptionValue",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "optionId",
+          "type": "Int"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "position",
+          "type": "Int"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "option",
+          "type": "ProductVariantOption"
+        }
+      ]
+    },
+    {
+      "name": "StockLevel",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "warehouseId",
+          "type": "Int"
+        },
+        {
+          "name": "productVariantId",
+          "type": "Int"
+        },
+        {
+          "name": "quantity",
+          "type": "Int"
+        },
+        {
+          "name": "reserved",
+          "type": "Int"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "reservations",
+          "type": "InventoryReservation[]"
+        },
+        {
+          "name": "variant",
+          "type": "ProductVariant"
+        },
+        {
+          "name": "warehouse",
+          "type": "Warehouse"
+        }
+      ]
+    },
+    {
+      "name": "ProductAttribute",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "productId",
+          "type": "Int"
+        },
+        {
+          "name": "attributeId",
+          "type": "Int"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "valueText",
+          "type": "String?"
+        },
+        {
+          "name": "valueNumber",
+          "type": "Decimal?"
+        },
+        {
+          "name": "valueBoolean",
+          "type": "Boolean?"
+        },
+        {
+          "name": "attributeValueId",
+          "type": "Int?"
+        },
+        {
+          "name": "attribute",
+          "type": "Attribute"
+        },
+        {
+          "name": "attributeValue",
+          "type": "AttributeValue?"
+        },
+        {
+          "name": "product",
+          "type": "Product"
+        }
+      ]
+    },
+    {
+      "name": "Attribute",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "AttributeType"
+        },
+        {
+          "name": "unit",
+          "type": "String?"
+        },
+        {
+          "name": "values",
+          "type": "AttributeValue[]"
+        },
+        {
+          "name": "productAttributes",
+          "type": "ProductAttribute[]"
+        },
+        {
+          "name": "categoryAttributes",
+          "type": "CategoryAttribute[]"
+        }
+      ]
+    },
+    {
+      "name": "AttributeValue",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "attributeId",
+          "type": "Int"
+        },
+        {
+          "name": "attribute",
+          "type": "Attribute"
+        },
+        {
+          "name": "productAttributes",
+          "type": "ProductAttribute[]"
+        }
+      ]
+    },
+    {
+      "name": "CartItem",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "userId",
+          "type": "String"
+        },
+        {
+          "name": "productId",
+          "type": "Int"
+        },
+        {
+          "name": "quantity",
+          "type": "Int"
+        },
+        {
+          "name": "variantId",
+          "type": "Int?"
+        },
+        {
+          "name": "lineKey",
+          "type": "String"
+        },
+        {
+          "name": "bundleConfiguration",
+          "type": "Json?"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "lastReminderAt",
+          "type": "DateTime?"
+        },
+        {
+          "name": "product",
+          "type": "Product"
+        },
+        {
+          "name": "user",
+          "type": "User"
+        },
+        {
+          "name": "variant",
+          "type": "ProductVariant?"
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "adminNotifications",
+          "type": "OrderAdminNotification[]"
+        },
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "userId",
+          "type": "String?"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "type": "String?"
+        },
+        {
+          "name": "phone_number",
+          "type": "String"
+        },
+        {
+          "name": "alt_phone_number",
+          "type": "String?"
+        },
+        {
+          "name": "country",
+          "type": "String"
+        },
+        {
+          "name": "district",
+          "type": "String"
+        },
+        {
+          "name": "area",
+          "type": "String"
+        },
+        {
+          "name": "address_details",
+          "type": "String"
+        },
+        {
+          "name": "image",
+          "type": "String?"
+        },
+        {
+          "name": "payment_method",
+          "type": "String"
+        },
+        {
+          "name": "order_date",
+          "type": "DateTime"
+        },
+        {
+          "name": "total",
+          "type": "Decimal"
+        },
+        {
+          "name": "shipping_cost",
+          "type": "Decimal"
+        },
+        {
+          "name": "grand_total",
+          "type": "Decimal"
+        },
+        {
+          "name": "currency",
+          "type": "String"
+        },
+        {
+          "name": "Vat_total",
+          "type": "Decimal?"
+        },
+        {
+          "name": "discount_total",
+          "type": "Decimal?"
+        },
+        {
+          "name": "status",
+          "type": "OrderStatus"
+        },
+        {
+          "name": "paymentStatus",
+          "type": "PaymentStatus"
+        },
+        {
+          "name": "transactionId",
+          "type": "String?"
+        },
+        {
+          "name": "termsAcceptedAt",
+          "type": "DateTime?"
+        },
+        {
+          "name": "privacyPolicyAcceptedAt",
+          "type": "DateTime?"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "couponId",
+          "type": "String?"
+        },
+        {
+          "name": "taxSnapshot",
+          "type": "Json?"
+        },
+        {
+          "name": "organizationId",
+          "type": "String?"
+        },
+        {
+          "name": "salesChannel",
+          "type": "SalesChannel"
+        },
+        {
+          "name": "salesQuotationVersionId",
+          "type": "String?"
+        },
+        {
+          "name": "commercialContext",
+          "type": "Json?"
+        },
+        {
+          "name": "fulfillmentWarehouseId",
+          "type": "Int?"
+        },
+        {
+          "name": "deliveryProofs",
+          "type": "DeliveryProof[]"
+        },
+        {
+          "name": "inventoryReservations",
+          "type": "InventoryReservation[]"
+        },
+        {
+          "name": "bundleStockReservations",
+          "type": "BundleStockReservation[]"
+        },
+        {
+          "name": "inventoryLogs",
+          "type": "InventoryLog[]"
+        },
+        {
+          "name": "coupon",
+          "type": "Coupon?"
+        },
+        {
+          "name": "user",
+          "type": "User?"
+        },
+        {
+          "name": "orderItems",
+          "type": "OrderItem[]"
+        },
+        {
+          "name": "payments",
+          "type": "Payment[]"
+        },
+        {
+          "name": "refunds",
+          "type": "Refund[]"
+        },
+        {
+          "name": "shipments",
+          "type": "Shipment?"
+        },
+        {
+          "name": "deliveryAssignments",
+          "type": "DeliveryAssignment[]"
+        },
+        {
+          "name": "creditLedgerEntries",
+          "type": "CreditLedgerEntry[]"
+        },
+        {
+          "name": "organization",
+          "type": "Organization?"
+        },
+        {
+          "name": "salesQuotationVersion",
+          "type": "SalesQuotationVersion?"
+        },
+        {
+          "name": "customerPurchaseOrder",
+          "type": "CustomerPurchaseOrder?"
+        },
+        {
+          "name": "partnerAttribution",
+          "type": "PartnerAttribution?"
+        },
+        {
+          "name": "partnerLeadWon",
+          "type": "PartnerLead?"
+        },
+        {
+          "name": "commissionEntries",
+          "type": "CommissionEntry[]"
+        },
+        {
+          "name": "businessRiskCases",
+          "type": "BusinessRiskCase[]"
+        },
+        {
+          "name": "fulfillmentWarehouse",
+          "type": "Warehouse?"
+        }
+      ]
+    },
+    {
+      "name": "OrderItem",
+      "matchesPastedSchema": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int"
+        },
+        {
+          "name": "orderId",
+          "type": "Int"
+        },
+        {
+          "name": "productId",
+          "type": "Int"
+        },
+        {
+          "name": "variantId",
+          "type": "Int?"
+        },
+        {
+          "name": "quantity",
+          "type": "Int"
+        },
+        {
+          "name": "price",
+          "type": "Decimal"
+        },
+        {
+          "name": "currency",
+          "type": "String"
+        },
+        {
+          "name": "VatAmount",
+          "type": "Decimal?"
+        },
+        {
+          "name": "discountAmount",
+          "type": "Decimal?"
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime"
+        },
+        {
+          "name": "costPriceSnapshot",
+          "type": "Decimal?"
+        },
+        {
+          "name": "priceSource",
+          "type": "BusinessPriceSource?"
+        },
+        {
+          "name": "publicUnitPriceSnapshot",
+          "type": "Decimal?"
+        },
+        {
+          "name": "businessDiscountSnapshot",
+          "type": "Decimal?"
+        },
+        {
+          "name": "bundleConfiguration",
+          "type": "Json?"
+        },
+        {
+          "name": "digitalDeliveries",
+          "type": "DigitalDelivery[]"
+        },
+        {
+          "name": "order",
+          "type": "Order"
+        },
+        {
+          "name": "product",
+          "type": "Product"
+        },
+        {
+          "name": "variant",
+          "type": "ProductVariant?"
+        },
+        {
+          "name": "refunds",
+          "type": "Refund[]"
+        },
+        {
+          "name": "serviceBooking",
+          "type": "ServiceBooking?"
+        },
+        {
+          "name": "shipmentItems",
+          "type": "ShipmentItem[]"
+        },
+        {
+          "name": "commissionEntries",
+          "type": "CommissionEntry[]"
+        },
+        {
+          "name": "bundleComponents",
+          "type": "OrderBundleComponent[]"
+        }
+      ]
+    }
+  ],
+  "existingRoutes": {
+    "products": "GET /api/products?view=storefront (public projection; not the proposed paginated facade)",
+    "categories": "GET /api/categories?view=storefront",
+    "facets": "GET /api/storefront/catalog-facets",
+    "cart": "GET/POST /api/cart (authenticated user)",
+    "shipping": "POST /api/shipping/quote (legacy browser subtotal input)",
+    "orders": "POST /api/orders (existing COD business logic)"
+  },
+  "versionedFacadeImplemented": false,
+  "liveBackendTested": false
+}
